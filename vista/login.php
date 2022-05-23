@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
-    <title>SUS Bank</title>
+    <title>Iniciar Sesion</title>
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -18,8 +18,8 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="#" class="select">Inicio</a></li>
-                        <li><a href="login.php">Acceso</a></li>
+                        <li><a href="index.php" class="select">Inicio</a></li>
+                        <li><a href="#">Acceso</a></li>
                         <li><a href="#">Sobre Nosotros</a></li>
                         <li><a href="#">Ayuda</a></li>
                     </ul>
@@ -29,76 +29,24 @@
         </div>
     </header>
     <!-- Fin Barra de navegacion -->
-    <!-- Portada -->
     <div class="container__all" id="container_all">
-        <div class="cover">
-            <div class="container__cover">
-                <div class="container__info">
-                    <h1>SUS</h1>
-                    <H2>Bank</H2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, nam fuga delectus 
-                    laudantium tenetur eligendi magnam neque ullam? Id laborum, in dolore debitis nisi delectus 
-                    ipsum voluptate quae est libero?</p>
-                    <input type="button" value="Get Started">
-                </div>
-                <div class="container__vector">
-                    <img src="../img/Wallet_Monochromatic.svg" alt="portada" type="img/svg">
-                </div>
-            </div>
-        </div>
-    <!-- Fin Portada -->
-    <!-- Box de cards -->
     <main>
-        <h1>Contratación digital</h1>
-        <div class="container__box">
-            <div class="box">
-                <i class="fa-solid fa-shop"></i>
-                <h5>Crédito de negocios</h5>
-                <h4>Crédito de negocios</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-address-card"></i>
-                <h5>Cuenta</h5>
-                <h4>Cuenta</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-wallet"></i>
-                <h5>Tarjeta de Credito</h5>
-                <h4>Tarjeta de Credito</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-chart-pie"></i>
-                <h5>Prestamos</h5>
-                <h4>Prestamos</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-chart-line"></i>
-                <h5>Inversiones</h5>
-                <h4>Inversiones</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-stethoscope"></i>
-                <h5>Seguro de Vida</h5>
-                <h4>Seguro de Vida</h4>
-            </div>
-        </div><br>
-        <!-- Fin Box de cards -->
-        <!-- Banner -->
-        <div class="container__banner">
-            <div class="banner">
-                <div class="icon">
-                    <img src="../img/8712738_lock_iso_premium_icon.png"  id="icon" alt="">
+        <div class="login">
+            <div class="container__login">
+                <div class="container__data">
+                    <h1>Iniciar Sesion</h1>
+                    <input type="text" name="user" id="user" placeholder="Usuario">
+                    <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                    <p>Olvido su Contraseña <a href="#">Da Click aqui</a></p>
+                    <input type="button" value="Iniciar Sesion">
+                    <p>No tiene Cuenta <a href="registro.php">Registrese!</a></p>
                 </div>
-                <div class="img__icon_dollar">
-                    <img src="../img/8712511_dollar_money_currency_coin_payment_icon.png" id="icon_dollar" alt="">
-                </div>
-                <div class="text">
-                    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eaque et id veritatis aliquam nesciunt quasi..</h2>
-                    <input type="button" value="Leer más">
+                <div class="container_img">
+                        <img src="../img/Content creation_Monochromatic.svg" alt="">
                 </div>
             </div>
         </div>
-        <!-- Fin Banner -->
+        
     </main>
     
 
@@ -144,6 +92,7 @@
     </footer>
     <!-- Fin Pie de Pagina -->
     </div>
-   <script src="../configuracion/js/app.js"></script>
+
+    <script src="../configuracion/js/app_login.js"></script>
 </body>
 </html>

@@ -208,6 +208,11 @@ nav ul li a{
         transform: scale(0);
         animation: none;
     }
+    .container__img img{
+        transform: scale(0);
+        animation: none;
+    }
+
 }
 /* Card hover */
 main{
@@ -413,3 +418,90 @@ footer{
     background-color: #7a7a7a;
 }
 /* Fin Pie de Pagina*/
+
+/*Login */
+.login{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 150px;
+}
+.container__login{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: bottom;
+    background-color: #d3d7d8;
+   
+}
+.login .container__data{
+    max-width: 500px;
+    margin-top: 40px;
+    flex-direction: column;
+    z-index: 2;
+    
+}
+.login h1{
+    max-width: 400px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #373737;
+}
+.login p{
+    margin-top: 20px;
+    color: #343a40 ;
+}
+.login p a{
+    margin-top: 10px;
+    color: #373737;
+}
+.login input[type="button"]{
+    padding: 10px 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    background: #484e53;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    cursor: pointer;
+    transition: box-shadow 500ms;
+}
+.login input[type="button"]:hover{
+    box-shadow: 1px 1px 30px -5px #20202080;
+}
+.login input[type="text"]{
+    width: 100%;
+    height: 20px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+.login input[type="password"]{
+    width: 100%;
+    height: 20px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+.container_img{
+    position: relative;
+}
+.container_img img{
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    width: 390px;
+    animation: move_vector 6s ease-in-out infinite;
+}
