@@ -360,6 +360,7 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    justify-content: center;
 }
 
 .box__footer .logo img{
