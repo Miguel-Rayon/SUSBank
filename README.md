@@ -3,7 +3,7 @@
 <p align="center"><div class="tenor-gif-embed" data-postid="25128806" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/hello-gif-25128806">Hello GIF</a>from <a href="https://tenor.com/search/hello-gifs">Hello GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></p>
 
 ---
-### Instalación 🔧
+### Visualización 🔧
 
 _Para entrar a la visualizacion de la pagina web hay que acceder al siguiente link:_
 
