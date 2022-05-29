@@ -16,7 +16,6 @@ _Las Herramientas que hemos usado al momento (planeamos ir agregando mas conform
 * [HTML]- Quien da la estructura a la pagina
 * [JS] - Para animacion o cosas mas complejas para CSS
 * [CSS]- Para dar el diseño a la pagina 
----
 ## Autores ✒️
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
