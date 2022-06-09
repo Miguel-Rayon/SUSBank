@@ -1,0 +1,43 @@
+.principal {
+    display: flex;
+    width: 100%;
+}
+.sections { 
+    
+    margin-top: 3%;
+    width: 50%;
+}
+.card-body {
+    background-color: white;
+    color: black;
+}
+h2{
+    text-align: center;
+}
+.table {
+    margin: 10px;
+    border: 1px solid #343a40;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.table td,
+.table th {
+    padding: 29px;
+    vertical-align: top;
+    border-top: 1px solid #343a40;
+}
+section{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+main{
+	margin-top: 140px;
+}
