@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
-    <title>Bienvenido!</title>
+    <title>Bienvenido</title>
 </head>
 <body>
      <!-- Barra de navegacion -->
@@ -18,7 +20,7 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="sobre.html">Sobre Nosotros</a></li>
                         <li><a href="#">Ayuda</a></li>
                         <li><a href="index.html" class="select">Cerrar Sesion</a></li>
                     </ul>
@@ -29,41 +31,37 @@
     </header>
     <!-- Fin Barra de navegacion -->
     <main style="margin-top: 140px;">
-        <!-- Box de cards -->
-        <h1>Contratación digital</h1>
-        <div class="container__box">
-            <div class="box">
-                <i class="fa-solid fa-shop"></i>
-                <h5>Crédito de negocios</h5>
-                <h4>Crédito de negocios</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-address-card"></i>
-                <h5>Cuenta</h5>
-                <h4>Cuenta</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-wallet"></i>
-                <h5>Tarjeta de Credito</h5>
-                <h4>Tarjeta de Credito</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-chart-pie"></i>
-                <h5>Prestamos</h5>
-                <h4>Prestamos</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-chart-line"></i>
-                <h5>Inversiones</h5>
-                <h4>Inversiones</h4>
-            </div>
-            <div class="box">
-                <i class="fa-solid fa-stethoscope"></i>
-                <h5>Seguro de Vida</h5>
-                <h4>Seguro de Vida</h4>
-            </div>
-        </div><br>
-        <!-- Fin Box de cards -->
+       <!-- Tabla de saldo e historia de transferencias -->
+       <h2>Bienvenido!</h2>
+       <section class="principal">
+           <section class="sections card text-white bg-secondary mb-3">
+               <div class="card-header">Saldo Actual</div>
+               <div class="card-body">
+                   <h5 class="card-title" id="saldo"></h5>
+               </div>
+           </section>
+           <section class="sections" id="historial">
+           <table class="table table-modal">
+               <p id="mssg-cad-error">No es posible visualizar su historial, intente más tarde
+                </p>
+                <p id="mssg-cad-sucess"></p>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col-1">#</th>
+                        <th scope="col-1">Valor</th>
+                        <th scope="col-1">Datos de Transferencia</th>
+                        <th scope="col-1">Cantidad</th>
+                        <th scope="col-1">Detalles</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+           </table>
+       </section>
+       </section>
+       
+   <!-- Fin de tabla -->
     </main>
 
 </body>
