@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
-    <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <title>Bienvenido</title>
 </head>
 <body>
@@ -34,14 +32,20 @@
        <!-- Tabla de saldo e historia de transferencias -->
        <h2>Bienvenido!</h2>
        <section class="principal">
-           <section class="sections card text-white bg-secondary mb-3">
-               <div class="card-header">Saldo Actual</div>
-               <div class="card-body">
-                   <h5 class="card-title" id="saldo"></h5>
-               </div>
-           </section>
+        <section class="sections" id="saldo">
+          <table class="table table-modal" style="width: 400px;">
+                 <thead class="thead-dark">
+                   <tr>
+                     <th scope="col-1">Saldo Actual</th>
+                   </tr>
+                 </thead>
+                 <tbody id="tsaldo">
+                   
+                 </tbody>
+               </table>
+        </section>
            <section class="sections" id="historial">
-           <table class="table table-modal">
+            <table class="table table-modal">
                <p id="mssg-cad-error">No es posible visualizar su historial, intente más tarde
                 </p>
                 <p id="mssg-cad-sucess"></p>
@@ -58,11 +62,11 @@
                    
                 </tbody>
            </table>
-       </section>
+        </section>
        </section>
        
    <!-- Fin de tabla -->
     </main>
-
+    <script src="../configuracion/js/app_home.js"></script>
 </body>
 </html>
