@@ -26,10 +26,6 @@ nav = document.getElementById("nav");
     function mostrar_menu(){
         
         menu.classList.toggle('move_content');
-<<<<<<< HEAD
-=======
-        body.classList.toggle('move_content');
->>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c
         nav.classList.toggle('move_nav');
     }
 
@@ -38,10 +34,6 @@ window.addEventListener("resize", function(){
 
     if(window.innerWidth > 760){
     menu.classList.remove('move_content');
-<<<<<<< HEAD
-=======
-    body.classList.remove('move_content');
->>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c
     nav.classList.remove('move_nav');
     }
 
