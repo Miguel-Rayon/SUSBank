@@ -161,4 +161,3 @@ window.addEventListener("resize", function(){
 /**
  * Fin de mover la barra de navegacion 
  */
-

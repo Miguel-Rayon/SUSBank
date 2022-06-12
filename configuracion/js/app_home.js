@@ -1,8 +1,9 @@
 /**
  * Animacion del scroll para que se vea chingon xd
  */
-window.onscroll = function(){
+ window.onscroll = function(){
     scroll = document.documentElement.scrollTop;
+
     header = document.getElementById("header");
 
     if (scroll > 20){
@@ -20,7 +21,6 @@ window.onscroll = function(){
 document.getElementById("btn_menu").addEventListener("click", mostrar_menu);
 
 menu = document.getElementById("header");
-body = document.getElementById("container_all");
 nav = document.getElementById("nav");
 
     function mostrar_menu(){

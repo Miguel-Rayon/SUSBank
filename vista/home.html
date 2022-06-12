@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
     <title>Bienvenido</title>
 </head>
 <body>
-     <!-- Barra de navegacion -->
-     <header id="header">
+    <!-- Barra de navegacion -->
+    <header id="header">
         <div class="container_header">
             <div class="logo">
                 <img src="../img/logo.png" alt="logo">
@@ -19,9 +20,10 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="sobre.html">Sobre Nosotros</a></li>
+                        <li><a href="#">Transferir</a></li>
+                        <li><a href="#">Mi Perfil</a></li>
                         <li><a href="ayuda.html">Ayuda</a></li>
-                        <li><a href="index.html" class="select">Cerrar Sesion</a></li>
+                        <li><a href="index.html" class="select">Cerrar</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -29,45 +31,63 @@
         </div>
     </header>
     <!-- Fin Barra de navegacion -->
-    <main style="margin-top: 140px;">
-       <!-- Tabla de saldo e historia de transferencias -->
-       <h2>Bienvenido!</h2>
-       <section class="principal">
-        <section class="sections" id="saldo">
-          <table class="table table-modal" style="width: 400px;">
-                 <thead class="thead-dark">
-                   <tr>
-                     <th scope="col-1">Saldo Actual</th>
-                   </tr>
-                 </thead>
-                 <tbody id="tsaldo">
-                   
-                 </tbody>
-               </table>
-        </section>
-           <section class="sections" id="historial">
-            <table class="table table-modal">
-               <p id="mssg-cad-error">No es posible visualizar su historial, intente más tarde
-                </p>
-                <p id="mssg-cad-sucess"></p>
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col-1">#</th>
-                        <th scope="col-1">Valor</th>
-                        <th scope="col-1">Datos de Transferencia</th>
-                        <th scope="col-1">Cantidad</th>
-                        <th scope="col-1">Detalles</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                   
-                </tbody>
-           </table>
-        </section>
-       </section>
-       
-   <!-- Fin de tabla -->
-    </main>
+    <div class="container_all">
+        <main style="margin-top: 140px;">
+            <h2>Bienvenido Usuario</h2>
+            <button><li><a href="#">Transferir</a></li></button>
+            <button><li><a href="#">Pagar Servicios</a></li></button>
+                <div class="tables">
+                    <div class="table1">
+                        <table class="tb_saldo">
+                            <thead>
+                                <tr>
+                                    <th>ㅤㅤ</th>
+                                    <th>ㅤㅤ</th>
+                                    <th scope="col-1">Su saldo es de:</th>
+                                    <th>ㅤㅤ</th>
+                                    <th>ㅤㅤ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ㅤㅤ</td>
+                                    <td>ㅤㅤ</td>
+                                    <td> $ 10,000 MX</td>
+                                    <td>ㅤㅤ</td>
+                                    <td>ㅤㅤ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table2">
+                        <table class="tb_historial">
+                            <thead>
+                                <tr>
+                                    <th>ㅤㅤ</th>
+                                    <th scope="col-1">Folio</th>
+                                    <th scope="col-1">Clabe</th>
+                                    <th scope="col-1">Cantidad</th>
+                                    <th scope="col-1">Fecha</th>
+                                    <th scope="col-1">PDF</th>
+                                    <th>ㅤㅤ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ㅤㅤ</td>
+                                    <td>12345</td>
+                                    <td>123456789009876543</td>
+                                    <td>$200 MX</td>
+                                    <td>12/04/2022</td>
+                                    <td><li><a href="#">Ver más</a></li></td>
+                                    <td>ㅤㅤ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </main>
+    </div>
     <script src="../configuracion/js/app_home.js"></script>
 </body>
 </html>
