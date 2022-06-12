@@ -13,6 +13,7 @@
 }
 /**
  * Fin de la animacion del scroll
+<<<<<<< HEAD
  */
 /**
  * Mover la barra de navegacion
@@ -41,3 +42,6 @@
  /**
   * Fin de mover la barra de navegacion 
   */
+=======
+ */
+>>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c

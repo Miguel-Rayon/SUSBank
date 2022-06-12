@@ -117,6 +117,7 @@ function output_message() {
         updateScrollbar();
     }, 1000 + (Math.random() * 20) * 100);
 
+<<<<<<< HEAD
 }
 /**
  * Animacion del scroll para que se vea chingon xd
@@ -161,3 +162,6 @@ window.addEventListener("resize", function(){
 /**
  * Fin de mover la barra de navegacion 
  */
+=======
+}
+>>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c

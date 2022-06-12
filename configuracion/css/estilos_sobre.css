@@ -80,6 +80,27 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.info__description input{
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: #2196f3;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    transition: box-shadow 300ms;
+}
+
+.info__description input:hover{
+    box-shadow: 1px 1px 30px -5px #20202070;
+}
+
+>>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c
 
 /*COLOR DE LAS CARD*/
 
