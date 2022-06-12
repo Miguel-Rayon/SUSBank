@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
+    <title>Bienvenido</title>
+</head>
+<body>
+     <!-- Barra de navegacion -->
+     <header id="header">
+        <div class="container_header">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo">
+            </div>
+            <div class="container__nav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                        <li><a href="index.html" class="select">Cerrar Sesion</a></li>
+                    </ul>
+                </nav>
+                <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+    <!-- Fin Barra de navegacion -->
+    <main style="margin-top: 140px;">
+       <!-- Tabla de saldo e historia de transferencias -->
+       <h2>Bienvenido!</h2>
+       <section class="principal">
+        <section class="sections" id="saldo">
+          <table class="table table-modal" style="width: 400px;">
+                 <thead class="thead-dark">
+                   <tr>
+                     <th scope="col-1">Saldo Actual</th>
+                   </tr>
+                 </thead>
+                 <tbody id="tsaldo">
+                   
+                 </tbody>
+               </table>
+        </section>
+           <section class="sections" id="historial">
+            <table class="table table-modal">
+               <p id="mssg-cad-error">No es posible visualizar su historial, intente más tarde
+                </p>
+                <p id="mssg-cad-sucess"></p>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col-1">#</th>
+                        <th scope="col-1">Valor</th>
+                        <th scope="col-1">Datos de Transferencia</th>
+                        <th scope="col-1">Cantidad</th>
+                        <th scope="col-1">Detalles</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+           </table>
+        </section>
+       </section>
+       
+   <!-- Fin de tabla -->
+    </main>
+    <script src="../configuracion/js/app_home.js"></script>
+</body>
+</html>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../configuracion/css/estilos_sobre.css">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
-    <title>Iniciar Sesion</title>
+    <title>Sobre Nosotros</title>
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -19,9 +20,9 @@
                 <nav id="nav">
                     <ul>
                         <li><a href="index.html" class="select">Inicio</a></li>
-                        <li><a href="#">Acceso</a></li>
-                        <li><a href="#">Sobre Nosotros</a></li>
-                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="login.html">Acceso</a></li>
+                        <li><a href="sobre.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -29,29 +30,64 @@
         </div>
     </header>
     <!-- Fin Barra de navegacion -->
-    <div class="container__all" id="container_all">
-    <main>
-        <div class="login">
-            <div class="container__login">
-                <div class="container__data">
-                    <h1>Registrate</h1>
-                    <input type="text" name="user" id="user" placeholder="Nombre Completo">
-                    <input type="text" name="user" id="user" placeholder="Usuario">
-                    <input type="text" name="user" id="user" placeholder="Email">
-                    <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                    <input type="password" name="pass" id="pass" placeholder="Confimar contraseña">
-                    <input type="button" value="Registrese">
-                    <p>Ya tiene cuenta? <a href="login.html">Inicie Sesion</a></p>
+     <!-- Portada -->
+     <div class="container__all" id="container_all">
+        <div class="cover">
+            <div class="container__cover">
+                <div class="container__info">
+                    <h1>Sobre</h1>
+                    <H2>Nosotros</H2>
+                    <p>La seguridad de tu dinero siempre será lo mas importante para nosotros. 
+                        Por eso  nuestro equipo de desarrolladores trabajó duro para cumplir sus espectativas.</p>
+                    <input type="button" value="Get Started">
                 </div>
-                <div class="container_img">
-                        <img src="../img/Content creation_Monochromatic.svg" alt="">
+                <div class="container__vector">
+                    <img src="../img/Finance analytics _Monochromatic.svg" alt="portada" type="img/svg">
                 </div>
             </div>
         </div>
-        
-    </main>
-    
+    <!-- Fin Portada -->
+       
+    <main>
+         <!-- cards -->
+        <div class="body__page">
 
+            <div class="container__card">
+
+                <div class="card c1">
+                    <div class="icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div class="info__description">
+                        <p>Alentar a las personas a manejar su vida de finanzas de una forma rápida y segura atreves el mundo digital.</p>
+                    </div>
+                </div>
+
+                <div class="card c2">
+                    <div class="icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <div class="info__description">
+                        <p>Los integrantes somos:</p>
+                        <p>Luis Adrian Gamez Ramos</p>
+                        <p>Eduardo Alberto Camargo Rodriguez</p>
+                        <p>José Miguel Hernández Rayón</p>
+                        <p>Sebastian Lopez Avila</p>
+                    </div>
+                </div>
+
+                <div class="card c3">
+                    <div class="icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="info__description">
+                        <p>Ser una compañía reconocida por ofrecer la mejor  y más memorable de las experiencias en servicios financieros de forma digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cards -->
+    </main>
 
     <!-- Pie de Pagina -->
     <footer>
@@ -93,8 +129,6 @@
         </div>
     </footer>
     <!-- Fin Pie de Pagina -->
-    </div>
-
-    <script src="../configuracion/js/app_login.js"></script>
+    <script src="../configuracion/js/app_sobre.js"></script>
 </body>
 </html>
