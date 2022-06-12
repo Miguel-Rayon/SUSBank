@@ -80,6 +80,8 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
 .info__description input{
     margin-top: 20px;
     padding: 10px 40px;
@@ -98,6 +100,7 @@
     box-shadow: 1px 1px 30px -5px #20202070;
 }
 
+>>>>>>> f8ea7e1200fb061a20f1efc2ea226e7e5d5bc43c
 
 /*COLOR DE LAS CARD*/
 
