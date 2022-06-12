@@ -117,7 +117,6 @@ function output_message() {
         updateScrollbar();
     }, 1000 + (Math.random() * 20) * 100);
 
-
 }
 /**
  * Animacion del scroll para que se vea chingon xd
