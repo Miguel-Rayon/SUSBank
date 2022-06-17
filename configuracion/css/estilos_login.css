@@ -10,7 +10,6 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
-
 .container {
   position: relative;
   width: 100%;
@@ -200,6 +199,7 @@ form.sign-in-form {
 .right-panel .content {
   transform: translateX(800px);
 }
+
 
 /* ANIMACION DE LA PAGINA */
 
