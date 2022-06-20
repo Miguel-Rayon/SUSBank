@@ -407,6 +407,7 @@ footer{
     margin-top: 10px;
     color: #7a7a7a;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .box__footer a:hover{
