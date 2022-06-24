@@ -4,15 +4,15 @@ include 'Mailer/src/SMTP.php';
 include 'Mailer/src/Exception.php';
 class enviar {
 public function enviar_correo($correo,$nombre,$mensaje,$pass){
-    $fromemail  = "16536@virtual.utsc.edu.mx";
-    $fromname   = $nombre;
+    $fromemail  = "SUS011927@hotmail.com";
+    $fromname   = "SUS Soporte";
     $host       = "smtp.office365.com";
     $port       = "587";
     $SMTPAuth   = "true";
     $SMTPSecure = "STARTTLS";
     $password   = "86942351Hr27";
     $subject    = "Folio de sugerencia/quejas";
-    $bodyEmail  = $mensaje."<br>su folio es: ".$pass. " Para mas informacion comuniquese en nuestras redes";
+    $bodyEmail  = $nombre."<br>Su Mensaje se ha enviado: ".$mensaje."<br>su folio es: ".$pass. "<br>Para mas informacion comuniquese en nuestras redes";
 
     $mail = new PHPMailer\PHPMailer\PHPMailer();
 
