@@ -20,7 +20,7 @@ header{
     top: 0;
     right: 0;
     z-index: 100;
-
+ 
 }
 .move_content{
     right: 180px;
@@ -174,6 +174,11 @@ nav ul li a{
         width: 500px;
     }
 }
+@media screen and (max-width: 620px){
+   .container__banner{
+    transform: scale(0);
+   }
+}
 
 @media screen and (max-width:760px){
     .container__nav{
@@ -211,6 +216,18 @@ nav ul li a{
     .container__img img{
         transform: scale(0);
         animation: none;
+    }
+    .container__banner .banner .icon img{
+        transform: scale(0.7);
+    }
+    .container__banner .banner .img__icon_dollar img{
+        transform: scale(0.7);
+    }
+    .container__banner .banner .text h2{
+        transform: scale(0.6);
+    }
+    .container__banner .banner .text input{
+        transform: scale(0);
     }
 
 }
@@ -390,6 +407,7 @@ footer{
     margin-top: 10px;
     color: #7a7a7a;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .box__footer a:hover{
@@ -505,3 +523,5 @@ footer{
     width: 390px;
     animation: move_vector 6s ease-in-out infinite;
 }
+
+

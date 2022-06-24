@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <title>SUS Bank</title>
 </head>
@@ -21,7 +23,7 @@
                         <li><a href="index.html" class="select">Inicio</a></li>
                         <li><a href="login.html">Acceso</a></li>
                         <li><a href="sobre.html">Sobre Nosotros</a></li>
-                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -93,8 +95,7 @@
                     <img src="../img/8712511_dollar_money_currency_coin_payment_icon.png" id="icon_dollar" alt="">
                 </div>
                 <div class="text">
-                    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eaque et id veritatis aliquam nesciunt quasi..</h2>
-                    <input type="button" value="Leer más">
+                    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eaque et id verigatis aliquam nesciunt quasi..</h2>
                 </div>
             </div>
         </div>
@@ -117,22 +118,22 @@
             </div>
             <div class="box__footer">
                 <h2>Soluciones</h2>
-                <a href="#">Prestamos</a>
-                <a href="#">Seguro de Vida</a>
-                <a href="#">Inversiones</a>
-                <a href="#">Credito</a>
+                <a onclick="prestamos()">Prestamos</a>
+                <a onclick="seguro()">Seguro de Vida</a>
+                <a onclick="inversion()">Inversiones</a>
+                <a onclick="credito()">Credito</a>
             </div>
             <div class="box__footer">
                 <h2>Compañia</h2>
-                <a href="#">Acerca de </a>
-                <a href="#">Trabajos</a>
-                <a href="#">Repositorio</a>
-                <a href="#">Ayuda</a>
+                <a href="sobre.html">Acerca de </a>
+                <a href="envio_correo/index.php">Contactanos</a>
+                <a href="https://github.com/Miguel-Rayon/SUSBank">Repositorio</a>
+                <a href="ayuda.html">Ayuda</a>
             </div>
             <div class="box__footer">
                 <h2>Redes Sociales</h2>
-                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="https://www.facebook.com/SUS-Bank-107577585325919/"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="https://twitter.com/sus_bank?t=qoXU6ca4PXuHk_pl1j2JKg&s=09"><i class="fab fa-twitter-square"></i> Twitter</a>
                 <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
                 <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
             </div>
@@ -145,5 +146,6 @@
     <!-- Fin Pie de Pagina -->
     </div>
    <script src="../configuracion/js/app.js"></script>
+   <script src="../configuracion/js/app_soluciones.js"></script>
 </body>
-</html>
+</html> 
