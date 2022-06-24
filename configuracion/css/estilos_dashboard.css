@@ -6,10 +6,6 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-h2{
-    text-align: center;
-   
-}
 .table1, .table2{
     display: flex;
     justify-content: center;
@@ -65,7 +61,7 @@ thead tr{
 }
 tbody tr{
     height:48px; 
-    border-bottom:1px solid #c2c4c6 ;
+    border-bottom:1px solid #6d6d6d ;
 }
 table tbody tr td li{
     list-style: none;
@@ -92,6 +88,11 @@ button li{
 }
 button li a{
     color: white;
+}
+@media screen and (max-width: 870px){
+.tables{
+    transform: scale(0.7);
+}
 }
 @media screen and (max-width: 500px){
     .tables{

@@ -1,19 +1,6 @@
 var messages_content = $('.messages-content');
 var greeting_intro = 0;
 var response;
-var main_data;
-
-$(document).ready(function() {
-
-    $.getJSON("https://api.countapi.xyz/hit/eni4sure.github.io/hngi-chatbot", function(view) {
-        $("#page_view_no").html(view.value);
-    });
-
-    $.getJSON("https://disease.sh/v2/countries/NG", function(response) {
-        main_data = response;
-    });
-
-});
 
 $(window).load(function() {
     messages_content.mCustomScrollbar();
@@ -82,30 +69,30 @@ function output_message() {
 
             if (message_react_value == "1") {
 
-                response = ` <b>Los pasos para registarse a SUSBank son: <br><br> -Presionar en "Acceseso" en la barra de navegacion <br> -Dar click en el boton "Registarse" <br> -Llenar los datos que se le solicitaran <br> -Una vez  llenados dar click en el boton "REGISTRESE"<br></b>  `;
+                response = ` <b>Los pasos para registrarse a SUSBank son: <br><br> -Presionar en "Acceso" en la barra de navegacion <br> -Dar click en el boton "Registrarse" <br> -Llenar los datos que se le solicitaran <br> -Una vez  llenados dar click en el boton "REGISTRESE"<br></b>  `;
 
             }
 
             if (message_react_value == "2") {
 
-                response = ` <b>Los pasos para iniciar sesion son: <br><br> -Presionar en "Acceseso" en la barra de navegacion <br> -Ingresar usario y contraseña <br> -Presionar el boton "INICIE SESION" <br> </b> `;
+                response = ` <b>Los pasos para iniciar sesion son: <br><br> -Presionar en "Acceso" en la barra de navegacion <br> -Ingresar usario y contraseña <br> -Presionar el boton "INICIE SESION" <br> </b> `;
             }
 
             if (message_react_value == "3") {
 
-                response = ` <b>Los pasos para conusltar tus movimientos son: <br><br> -Inicia session <br> -Presione historial de mieviemientos<br><br>En caso de tener anomalias en su cuenta llamar a: 812408</b> </b>`;
+                response = ` <b>Los pasos para consultar tus movimientos son: <br><br> -Inicia sesion <br> -Presione historial de movimientos<br><br>En caso de tener anomalias en su cuenta llamar a: 812408</b> </b>`;
             }
 
         } else {
 
-            response = '<b>¡No entiendo eso! <br> Escribe el numero de tu problema <br>0: Robo, extravío, o cancelamiento de la tarjeta <br> 1: ¿Como registrarme a SUSBank? <br> 2: ¿Como iniciarsesión?<br> <b>3</b>: Aclaración de saldo </b>';
+            response = '<b>¡No entiendo eso! <br> Escribe el numero de tu problema <br>0: Robo, extravío, o cancelamiento de la tarjeta <br> 1: ¿Como registrarme a SUSBank? <br> 2: ¿Como iniciar sesión?<br> <b>3</b>: Aclaración de saldo </b>';
         }
     }
 
 
     if (response == null) {
 
-        response = '<b>Encantado de conocerte <br>Selecciona cual es tu problema <br> 0: Robo, extravío, o cancelamiento de la tarjeta <br> <b>1</b>: ¿Como registrarme a SUSBank? <br> <b>2</b>: ¿Como iniciarsesión?<br> <b>3</b>: Aclaración de saldo</b>';
+        response = '<b>Encantado de conocerte <br>Selecciona cual es tu problema <br> 0: Robo, extravío, o cancelamiento de la tarjeta <br> <b>1</b>: ¿Como registrarme a SUSBank? <br> <b>2</b>: ¿Como iniciar sesión?<br> <b>3</b>: Aclaración de saldo</b>';
 
     }
 
