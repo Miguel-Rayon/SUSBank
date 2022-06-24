@@ -1,20 +1,24 @@
-function enviar_correo() {
-    var correo = document.getElementById('correo').value;
-    var nombre = document.getElementById('nombre').value;
-    var mensaje = document.getElementById('mensaje').value;
+function login() {
+    var correo = document.getElementById('correo_login').value;
+    var pass = document.getElementById('pass_login').value;
+    var datos = new FormData();
+    datos.append("correo", correo);
+    datos.append("pass", pass);
     $.ajax({
-        url: "enviar_correo.php",
+        url: "../controlador/login.php",
         type: "POST",
-        data: "correo=" + correo + "&nombre=" + nombre + "&mensaje=" + mensaje,
+        processData: false,
+        contentType: false,
+        data: datos,
         success: function(resp) {
             var respuesta = JSON.parse(resp);
             if (respuesta.status == "1") {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Exito!',
-                    text: 'El correo se ha enviado exitosamente!',
+                    title: 'Datos Correctos',
+                    text: 'Bienvenido ' + respuesta.nombre,
                     showCancelButton: false,
-                    confirmButtonColor: '#343a40',
+                    confirmButtonColor: '#373737',
                     confirmButtonText: 'Continuar'
                     
                   }).then((result) => {
@@ -26,11 +30,12 @@ function enviar_correo() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Correo no enviado!'
+                    text: 'Usuario y/o contraseña incorrecta!',
+                    confirmButtonColor: '#373737',
+                    confirmButtonText: 'Ok'
                   })
             }
-
         }
 
-    });
+    })
 }
