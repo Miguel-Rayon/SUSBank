@@ -28,4 +28,17 @@ CREATE TABLE `transferencia` (
   CONSTRAINT `transferencia_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuarios` (`id_user`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `servicio`(
+  `id_servicio` INT (12) NOT NULL AUTO_INCREMENT,
+  `servicio` VARCHAR (20) DEFAULT NULL,
+  `cantidad` VARCHAR (5) DEFAULT NULL,
+  `referencia` VARCHAR (20) DEFAULT NULL,
+  `fecha` DATETIME DEFAULT NULL,
+  `id_user` INT(11) DEFAULT NULL,
+  PRIMARY KEY  (`id_servicio`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `servicio_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuarios` (`id_user`)
+)
+
+
 
