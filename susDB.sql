@@ -38,7 +38,7 @@ CREATE TABLE `servicio`(
   PRIMARY KEY  (`id_servicio`),
   KEY `id_user` (`id_user`),
   CONSTRAINT `servicio_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuarios` (`id_user`)
-)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 
 

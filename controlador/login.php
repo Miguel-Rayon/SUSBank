@@ -17,14 +17,10 @@ if(empty($resultado)){
     }
     $_SESSION['login'] = "ok";
     $_SESSION['nombre'] =  $nombre;
-    $_SESSION['clabe'] = $clabe;
-    $_SESSION['num_tarjeta'] = $num_tarjeta;
     $url = "home.php";
     exit(json_encode([
         "status" => "1",
         "nombre" => $nombre,
-        "clabe" => $clabe,
-        "num_tarjeta" => $num_tarjeta,
         "url" => "$url"
     ]));
 }
