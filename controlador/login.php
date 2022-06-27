@@ -1,7 +1,9 @@
 <?php
 session_start();
-$correo = $_POST['correo_login'];
-$pass = $_POST['pass_login'];
+
+$correo = $_POST['correo'];
+$pass = $_POST['pass'];
+
 
 include("../modelo/login.php");
 $obj = new Login();

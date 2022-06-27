@@ -29,5 +29,3 @@ CREATE TABLE `transferencia` (
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 
-	
-
