@@ -30,4 +30,3 @@ function credito(){
     confirmButtonText: 'Continuar'
   })
 }
-
