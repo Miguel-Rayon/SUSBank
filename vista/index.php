@@ -20,10 +20,10 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="index" class="select">Inicio</a></li>
-                        <li><a href="login">Acceso</a></li>
-                        <li><a href="sobre">Sobre Nosotros</a></li>
-                        <li><a href="ayuda">Ayuda</a></li>
+                        <li><a href="index.php" class="select">Inicio</a></li>
+                        <li><a href="login.php">Acceso</a></li>
+                        <li><a href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.php">Ayuda</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -126,10 +126,10 @@
             </div>
             <div class="box__footer">
                 <h2>Compañia</h2>
-                <a href="sobre">Acerca de </a>
+                <a href="sobre.php">Acerca de </a>
                 <a href="envio_correo/index.php">Contactanos</a>
                 <a href="https://github.com/Miguel-Rayon/SUSBank">Repositorio</a>
-                <a href="ayuda">Ayuda</a>
+                <a href="ayuda.php">Ayuda</a>
             </div>
             <div class="box__footer">
                 <h2>Redes Sociales</h2>

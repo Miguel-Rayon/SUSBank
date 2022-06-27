@@ -26,9 +26,9 @@ session_start();
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="transferencia">Transferir</a></li>
-                        <li><a href="perfil">Mi Perfil</a></li>
-                        <li><a href="ayuda">Ayuda</a></li>
+                        <li><a href="transferencia.php">Transferir</a></li>
+                        <li><a href="perfil.php">Mi Perfil</a></li>
+                        <li><a href="ayuda.php">Ayuda</a></li>
                         <li onclick="cerrar()" style="cursor: pointer;"><a class="select">Cerrar</a></li>
                     </ul>
                 </nav>

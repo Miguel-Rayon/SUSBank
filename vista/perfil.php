@@ -17,7 +17,7 @@
         <div class="forms-container">
           <div class="signin-signup">
             <!-- Mi perfil -->
-            <form action="home" class="sign-in-form">
+            <form action="home.php" class="sign-in-form">
               <h2 class="title">Mi perfil</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
