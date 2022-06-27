@@ -30,7 +30,7 @@ function login() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Usuario y/o contraseña incorrecta!',
+                    text: 'Correo y/o contraseña incorrecta!',
                     confirmButtonColor: '#373737',
                     confirmButtonText: 'Ok'
                   })

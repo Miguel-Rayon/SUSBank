@@ -19,7 +19,7 @@ function enviar_correo() {
                     
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.replace(respuesta.url)
+                        window.location.href = window.location.href;
                     }
                 })
             } else {
