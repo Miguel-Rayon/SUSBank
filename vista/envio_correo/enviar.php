@@ -10,7 +10,7 @@ public function enviar_correo($correo,$nombre,$mensaje,$pass){
     $port       = "587";
     $SMTPAuth   = "true";
     $SMTPSecure = "STARTTLS";
-    $password   = "86942351Hr27";
+    $password   = "86942351Hr27$";
     $subject    = "Folio de sugerencia/quejas";
     $bodyEmail  = $nombre."<br>Su Mensaje se ha enviado: ".$mensaje."<br>su folio es: ".$pass. "<br>Para mas informacion comuniquese en nuestras redes";
 
