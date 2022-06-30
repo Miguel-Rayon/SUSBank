@@ -1,4 +1,3 @@
-
 <?php
 
 include 'conexion.php';
@@ -22,6 +21,5 @@ class agregar{
          $resultado = $this->db->query("INSERT INTO usuarios (nombre,correo,pass,curp,cel,num_tarjeta,saldo,clabe) VALUES ('$nombre','$correo','$pass','$curp','$cel','$num_tarjeta','$saldo','$clabe')");
      }
 }
-
 
 ?>

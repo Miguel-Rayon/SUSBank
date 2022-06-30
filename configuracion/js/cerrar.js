@@ -19,7 +19,7 @@ function cerrar() {
                 success: function(resp) {
                     var respuesta = JSON.parse(resp);
                     if (respuesta.status == "1") {
-                        window.location.replace("index")
+                        window.location.replace("index.php")
                     }
                 }
             })

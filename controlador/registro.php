@@ -6,9 +6,9 @@ $correo = $_POST['correo'];
 $pass = $_POST['pass'];
 $curp = $_POST['curp'];
 $cel = $_POST['cel'];
-$num_tarjeta=$card;
+$num_tarjeta= $card;
 $saldo= $sald;
-$clabe=$c;
+$clabe= $c;
 
 
 include("../modelo/registro.php");
@@ -17,10 +17,14 @@ $resultado = $obj -> agregar_usuario($nombre,$correo,$pass,$curp,$cel,$num_tarje
 
 
 $_SESSION['nombre'] =  $nombre;
-$url = "home.html";
+$_SESSION['clabe'] = $clabe;
+$_SESSION['num_tarjeta'] = $num_tarjeta;
+$url = "home.php";
 exit(json_encode([
     "status" => "1",
     "nombre" => $nombre,
+    "clabe" => $clabe,
+    "num_tarjeta" => $num_tarjeta,
     "url" => "$url"
 ]));
 

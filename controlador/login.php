@@ -1,9 +1,7 @@
 <?php
 session_start();
-
 $correo = $_POST['correo'];
 $pass = $_POST['pass'];
-
 
 include("../modelo/login.php");
 $obj = new Login();
@@ -19,7 +17,7 @@ if(empty($resultado)){
     }
     $_SESSION['login'] = "ok";
     $_SESSION['nombre'] =  $nombre;
-    $url = "home.html";
+    $url = "home.php";
     exit(json_encode([
         "status" => "1",
         "nombre" => $nombre,

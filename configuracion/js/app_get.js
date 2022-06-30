@@ -1,7 +1,7 @@
 function get(){
     Swal.fire({
         icon: 'question',
-        title: 'Datos Correctos',
+        title: 'Bienvenido',
         text: 'Desea ir al login?',
         showCancelButton: false,
         confirmButtonColor: '#373737',

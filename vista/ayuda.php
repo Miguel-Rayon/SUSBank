@@ -24,10 +24,10 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="index" class="select">Inicio</a></li>
-                        <li><a href="login">Acceso</a></li>
-                        <li><a href="sobre">Sobre Nosotros</a></li>
-                        <li><a href="ayuda">Ayuda</a></li> 
+                        <li><a href="index.php" class="select">Inicio</a></li>
+                        <li><a href="login.php">Acceso</a></li>
+                        <li><a href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.php">Ayuda</a></li> 
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
