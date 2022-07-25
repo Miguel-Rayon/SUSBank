@@ -32,7 +32,7 @@ function registro() {
                     if (respuesta.status == "1") {
                         Swal.fire({
                             title: 'Atención!',
-                            text:  nombre+ " su usuario ha sido añadido correctamente",
+                            text:  nombre+ " su usuario ha sido añadido correctamente, favor de iniciar sesion para verificar datos.",
                             icon: 'success',
                             showCancelButton: false,
                             confirmButtonColor: '#373737',
@@ -40,6 +40,14 @@ function registro() {
                         }).then((result) => {
                             window.location.replace(respuesta.url)
                         })
+                    }else{
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'No colocar datos vacios',
+                            confirmButtonColor: '#373737',
+                            confirmButtonText: 'Ok'
+                          })
                     }
                 }
             })

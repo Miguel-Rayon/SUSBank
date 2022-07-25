@@ -1,5 +1,4 @@
 <?php
-
 include 'conexion.php';
 
 class datos{
@@ -14,12 +13,11 @@ class datos{
 
 
      public function dato(){
-         
-         $resultado = $this->db->query("SELECT * FROM usuarios where id={$_SESSION['id_user']}");
+         $resultado = $this->db->query("SELECT * FROM usuarios where id_user='".$_SESSION['id_user']."'");
          while($filas = $resultado->fetch_assoc()){
-                $this->lista[] = $filas;
-         }
-         return $this->lista;
+            $this->lista[] = $filas;
+     }
+     return $this->lista;
      }
 }
 

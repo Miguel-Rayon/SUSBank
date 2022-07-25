@@ -9,7 +9,7 @@ CREATE TABLE `usuarios` (
   `curp` VARCHAR(20) DEFAULT NULL,
   `cel` VARCHAR(10) DEFAULT NULL,
   `num_tarjeta` VARCHAR (16) DEFAULT NULL,
-  `saldo` INT (8) DEFAULT NULL,
+  `saldo` VARCHAR (8) DEFAULT NULL,
   `clabe` VARCHAR (18) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -18,10 +18,8 @@ CREATE TABLE `transferencia` (
   `id` INT(12) NOT NULL AUTO_INCREMENT,
   `folio` VARCHAR(5) DEFAULT NULL,
   `clabe` VARCHAR(18) DEFAULT NULL,
-  `clabe_env` VARCHAR(18) DEFAULT NULL,
-  `monto` INT(8) DEFAULT NULL,
+  `monto` VARCHAR(8) DEFAULT NULL,
   `concepto` VARCHAR(50) DEFAULT NULL,
-  `fecha` DATETIME DEFAULT NULL,
   `id_user` INT(11) DEFAULT NULL,
   PRIMARY KEY  (`id`),
   KEY `id_user` (`id_user`),
@@ -33,7 +31,6 @@ CREATE TABLE `servicio`(
   `servicio` VARCHAR (20) DEFAULT NULL,
   `cantidad` VARCHAR (5) DEFAULT NULL,
   `referencia` VARCHAR (20) DEFAULT NULL,
-  `fecha` DATETIME DEFAULT NULL,
   `id_user` INT(11) DEFAULT NULL,
   PRIMARY KEY  (`id_servicio`),
   KEY `id_user` (`id_user`),

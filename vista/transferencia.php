@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['id_user'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_pagos.css">
@@ -16,29 +22,29 @@
         <div class="forms-container">
           <div class="signin-signup">
                <!-- Tranferencia -->
-            <form action="home.php" class="sign-in-form">
+            <form action="return false" onsubmit="return false" class="sign-in-form">
               <h2 class="title">Tranferencia</h2>
               <div class="input-field">
                 <i class="fa-solid fa-clipboard-user"></i>
-                <input type="text" placeholder="Clabe a transferir" />
+                <input type="text" placeholder="Clabe a transferir" id="clabe_rec" />
               </div>
               <div class="input-field">
                 <i class="fa-brands fa-bitcoin"></i>
-                <input type="text" placeholder="Cantidad" />
+                <input type="number" placeholder="Cantidad" id="cantidad" />
               </div>
               <div class="input-field">
                 <i class="fa-solid fa-receipt"></i>
-                <input type="text" placeholder="Concepto" />
+                <input type="text" placeholder="Concepto" id="concepto" />
               </div>
-              <input type="submit" value="Tranferir" class="btn solid" />
-              <input type="submit" value="Cancelar" class="btn solid" />
+              <input type="submit" value="Tranferir" onclick="tranferir()" class="btn solid" />
+              <input type="submit" value="Cancelar"  class="btn solid" />
             </form>
             <!-- Pago de Servicio -->
-            <form action="home.php" class="sign-up-form">
+            <form action="return false" onsubmit="return false" class="sign-up-form">
               <h2 class="title">Pagar Servicios</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input list="servicio" placeholder="Servicio a pagar" />
+                <input list="servicio" placeholder="Servicio a pagar" id="servicios" />
                 <datalist id="servicio">
                     <option value="CFE">
                     <option value="Agua y Drenaje">
@@ -48,15 +54,16 @@
               </div>
               <div class="input-field">
                 <i class="fa-solid fa-receipt"></i>
-                <input type="text" placeholder="referencia"/>
+                <input type="text" placeholder="referencia" id="referencia"/>
               </div>
               <li style="list-style: none;"><a style="color: #373737; font-size: 15px; text-decoration: none; cursor: pointer;" onclick="referencia()">Que es la referencia?</a></li>
               <div class="input-field">
                 <i class="fa-brands fa-bitcoin"></i>
-                <input type="text" placeholder="Cantidad" />
+                <input type="number" placeholder="Cantidad" id="cantidad_servicio" />
               </div>
-              <input type="submit" value="Pagar" class="btn solid" />
+              <input type="submit" value="Pagar" onclick="servicio()" class="btn solid" />
               <input type="reset" value="Cancelar" class="btn solid" />
+              <input type="button" value="Volver" onclick="location.href='home.php'" class="btn solid" />
             </form>
           </div>
         </div>
@@ -91,5 +98,7 @@
         </div>
       </div>
       <script src="../configuracion/js/app_pagos.js"></script>
+      <script src="../configuracion/js/app_transfer.js"></script>
+      <script src="../configuracion//js/app_servicio.js"></script>
 </body>
 </html>

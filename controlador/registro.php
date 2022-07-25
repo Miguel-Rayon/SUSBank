@@ -10,7 +10,7 @@ $num_tarjeta= $card;
 $saldo= $sald;
 $clabe= $c;
 
-
+if ($_POST['nombre']!=null AND $_POST['correo'] != null AND $_POST['pass'] != null AND $_POST['curp'] != null AND $_POST['cel'] != null){
 include("../modelo/registro.php");
 $obj = new agregar();
 $resultado = $obj -> agregar_usuario($nombre,$correo,$pass,$curp,$cel,$num_tarjeta,$saldo,$clabe);
@@ -19,14 +19,20 @@ $resultado = $obj -> agregar_usuario($nombre,$correo,$pass,$curp,$cel,$num_tarje
 $_SESSION['nombre'] =  $nombre;
 $_SESSION['clabe'] = $clabe;
 $_SESSION['num_tarjeta'] = $num_tarjeta;
-$url = "home.php";
+$url = "login.php";
 exit(json_encode([
+    
     "status" => "1",
     "nombre" => $nombre,
     "clabe" => $clabe,
     "num_tarjeta" => $num_tarjeta,
     "url" => "$url"
-]));
+]));}else {
+    exit(json_encode([
+    
+        "status" => "2",
+    ]));
+}
 
 
 ?>
