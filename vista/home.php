@@ -9,6 +9,7 @@ $resultado = $obj -> dato();
 include("../modelo/mostrar_servicio.php");
 $ob = new servicios();
 $resulto = $ob -> servicio();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +20,9 @@ $resulto = $ob -> servicio();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -45,7 +49,7 @@ $resulto = $ob -> servicio();
                     <ul>
                         <li><a href="transferencia.php">Transferir</a></li>
                         <li><a href="perfil.php?<?php echo $_SESSION['id_user']; ?>">Mi Perfil</a></li>
-                        <li><a href="ayuda.php">Ayuda</a></li>
+                       
                         <li onclick="cerrar()" style="cursor: pointer;"><a class="select">Cerrar</a></li>
                     </ul>
                 </nav>
@@ -62,7 +66,7 @@ $resulto = $ob -> servicio();
                     <h1>Bienvenido</h1>
                     <H2>Usuario</H2>
                     <p>Que tal <?php echo $_SESSION['nombre']; ?> que es la realizaras hoy? SUS BANK esta a tu servicio, si necesitas ayuda acude al apartado de ayuda</p>
-                    <button><li><a href="transferencia.php">Transferir y pago de servicios</a></li></button>
+                    <button><li><a href="reporte.php">Estado de cuenta</a></li></button>
                 </div>
                 <div class="container__vector">
                     <div class="tables">
@@ -99,7 +103,7 @@ $resulto = $ob -> servicio();
                                         <th>Clabe</th>
                                         <th>Concepto</th>
                                         <th>Cantidad</th>
-                                        <th>PDF</th>
+                                        <th>ㅤㅤ</th>
                                         
                                     </tr>
                                 </thead>
@@ -107,25 +111,75 @@ $resulto = $ob -> servicio();
                                 <?php if ($result != null) {?>
                                 <?php foreach($result as $r){ ?>
                                     <tr>
-                                        <td><?php echo $r['folio'] ?></td>
-                                        <td><?php echo $r['clabe'] ?></td>
-                                        <td><?php echo $r['concepto'] ?></td>
-                                        <td>$<?php echo $r['monto'] ?> MX</td>
-                                        <td><li><a href="reporte.php">Ver más</a></li></td>
+                                        <td id="folio<?php echo $r['id'];?>"><?php echo $r['folio'] ?></td>
+                                        <td id="clabe<?php echo $r['id'];?>"><?php echo $r['clabe'] ?></td>
+                                        <td id="concepto<?php echo $r['id'];?>"><?php echo $r['concepto'] ?></td>
+                                        <td id="monto<?php echo $r['id'];?>">$<?php echo $r['monto'] ?> MX</td>
+                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $r['id'] ?>">Ver más</a></li></td> 
                                     </tr>
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="modal<?php echo $r['id'] ?>">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                    <h4 class="modal-title">Transferencia</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                    <div class="form-group">
+                                                    <label>Folio:</label>
+                                                    <input type="text" class="form-control" value="<?php echo $r['folio'] ?>" id="folio<?php echo $r['id'];?>" readonly="readonly">
+                                                    <label>clabe:</label>
+                                                    <input type="text" class="form-control" value="<?php echo $r['clabe'] ?>" id="clabe<?php echo $r['id'];?>" readonly="readonly">
+                                                    <label>concepto:</label>
+                                                    <input type="text" class="form-control" value="<?php echo $r['concepto'] ?>" id="concepto<?php echo $r['id'];?>" readonly="readonly">
+                                                    <label>monto (MX):</label>
+                                                    <input type="number" class="form-control" value="<?php echo $r['monto'] ?>" id="monto<?php echo $r['id'];?>" readonly="readonly">
+                                                    <input type="hidden" id="id<?php echo $r['id'] ?>" value="<?php echo $r['id'] ?>">
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     <?php } ?>
                                     <?php } else{ ?>
-                                        <tr>Por el momento no hay tranferencias </tr>
+                                        <tr>Por el momento no hay tranferencias, </tr>
                                     <?php } ?>
                                     <?php if ($resulto != null) {?>
                                     <?php foreach($resulto as $rs){ ?>
                                     <tr>
-                                        <td><?php echo $rs['servicio'] ?></td>
-                                        <td><?php echo $rs['referencia'] ?></td>
-                                        <td>Pago de: <?php echo $rs['servicio'] ?></td>
-                                        <td>$<?php echo $rs['cantidad'] ?> MX</td>
-                                        <td><li><a href="#">Ver más</a></li></td>
+                                        <td id="servicios<?php echo $rs['id_servicio'];?>"><?php echo $rs['servicio'] ?></td>
+                                        <td id="referencia<?php echo $rs['id_servicio'];?>"><?php echo $rs['referencia'] ?></td>
+                                        <td id="servicio<?php echo $rs['id_servicio'];?>">Pago de: <?php echo $rs['servicio'] ?></td>
+                                        <td id="cantidad<?php echo $rs['id_servicio'];?>">$<?php echo $rs['cantidad'] ?> MX</td>
+                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $rs['id_servicio'] ?>">Ver más</a></li></td>
                                     </tr>
+                                     <!-- The Modal -->
+                                     <div class="modal fade" id="modal<?php echo $rs['id_servicio'] ?>">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                    <h4 class="modal-title">Servicio</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                    <div class="form-group">
+                                                    <label>Servicio:</label>
+                                                    <input type="text" class="form-control" value="<?php echo $rs['servicio'] ?>" id="folio<?php echo $rs['id_servicio'];?>" readonly="readonly">
+                                                    <label>Referencia:</label>
+                                                    <input type="text" class="form-control" value="<?php echo $rs['referencia'] ?>" id="referencia<?php echo $rs['id_servicio'];?>" readonly="readonly">
+                                                    <label>Cantidad (MX):</label>
+                                                    <input type="text" class="form-control" value="<?php echo $rs['cantidad'] ?>" id="cantidad<?php echo $rs['id_servicio'];?>" readonly="readonly">
+                                                    <input type="hidden" id="id<?php echo $rs['id'] ?>" value="<?php echo $rs['id_servicio'] ?>">
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     <?php } ?>
                                     <?php } else{ ?>
                                         <tr>Por el momento no sean pagado servicios </tr>
@@ -141,5 +195,6 @@ $resulto = $ob -> servicio();
     <!-- Fin Portada -->
     <script src="../configuracion/js/app_home.js"></script>
     <script src="../configuracion/js/cerrar.js"></script>
+    <script src="../configuracion/js/reporte.js"></script>
 </body>
 </html>

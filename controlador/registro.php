@@ -7,7 +7,7 @@ $pass = $_POST['pass'];
 $curp = $_POST['curp'];
 $cel = $_POST['cel'];
 $num_tarjeta= $card;
-$saldo= $sald;
+$saldo= 0;
 $clabe= $c;
 
 if ($_POST['nombre']!=null AND $_POST['correo'] != null AND $_POST['pass'] != null AND $_POST['curp'] != null AND $_POST['cel'] != null){
