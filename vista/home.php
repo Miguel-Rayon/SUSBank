@@ -196,5 +196,24 @@ $resulto = $ob -> servicio();
     <script src="../configuracion/js/app_home.js"></script>
     <script src="../configuracion/js/cerrar.js"></script>
     <script src="../configuracion/js/reporte.js"></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6RyZQJGTYUIOYdJ5iHW3aDASRJuLgXks",
+    authDomain: "bancosus-a12fc.firebaseapp.com",
+    projectId: "bancosus-a12fc",
+    storageBucket: "bancosus-a12fc.appspot.com",
+    messagingSenderId: "806049636171",
+    appId: "1:806049636171:web:e89637e645a36cb6ea52ce"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
 </body>
 </html>

@@ -6,6 +6,9 @@ $result = $objt -> transferencia();
 include("../modelo/mostrar_servicio.php");
 $ob = new servicios();
 $resulto = $ob -> servicio();
+include("../modelo/mostrar_datos_r.php");
+$obj= new datos();
+$resulta = $obj -> dato();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +36,7 @@ $resulto = $ob -> servicio();
             </div>
             <div class="container__nav">
                 <nav id="nav">
-                    <ul>
+                    <ul> 
                         <li><a id="btnCrearPdf" style="cursor: pointer;" class="select">Generar PDF</a></li>
                         <li><a href="home.php" class="select">Volver</a></li>
                     </ul>
@@ -50,6 +53,11 @@ $resulto = $ob -> servicio();
                     <h1>Estado de</h1>
                     <H2>Cuenta</H2>
                     <p>Estado de Cuenta de <?php echo $_SESSION['nombre']; ?></p>
+                    <?php foreach($resulta as $a){ ?>
+                        <p>numero de cuenta: <?php echo $a['num_tarjeta'] ?></p>
+                        <p>clabe interbancaria: <?php echo $a['clabe'] ?></p>
+                        <p>CURP: <?php echo $a['curp'] ?></p>
+                    <?php } ?>
                     <button><li><a><?php
                     date_default_timezone_set('America/Monterrey');
                     $DateAndTime = date('m-d-Y h:i:s a', time());  

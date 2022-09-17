@@ -6,7 +6,7 @@ $mensaje = $_POST['mensaje'];
 include("enviar.php");
 $obj = new enviar();
 $resultado = $obj -> enviar_correo($correo,$nombre,$mensaje,$pass);
-$url = "../home.html";
+$url = "../home.php";
 exit(json_encode(
     ["status"=>"1", "url" => "$url" ]
     
