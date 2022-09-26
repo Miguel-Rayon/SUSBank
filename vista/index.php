@@ -11,6 +11,7 @@
     <title>SUS Bank</title>
 </head>
 <body>
+    
     <!-- Barra de navegacion -->
     <header id="header">
         <div class="container_header">
@@ -29,6 +30,7 @@
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
             </div>
         </div>
+        
     </header>
     <!-- Fin Barra de navegacion -->
     <!-- Portada -->
