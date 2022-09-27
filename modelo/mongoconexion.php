@@ -1,7 +1,5 @@
 <?php
-
-    require_once "../vendor/autoload.php";
-
+    require_once $_SERVER['DOCUMENT_ROOT']. "/SUSBank/vendor/autoload.php";
     class Conexion{
         public function conectar(){
             try {
