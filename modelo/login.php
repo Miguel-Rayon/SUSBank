@@ -21,5 +21,3 @@ class login{
          return $this->lista;
      }
 }
-
-?>

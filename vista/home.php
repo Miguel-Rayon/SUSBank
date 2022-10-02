@@ -22,8 +22,11 @@ $resulto = $ob -> servicio();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+	<script defer src="../configuracion/js/app_qr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script>
@@ -47,10 +50,10 @@ $resulto = $ob -> servicio();
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="transferencia.php">Transferir</a></li>
-                        <li><a href="perfil.php?<?php echo $_SESSION['id_user']; ?>">Mi Perfil</a></li>
+                        <li style=" list-style: none;"><a href="transferencia.php">Transferir</a></li>
+                        <li style=" list-style: none;"><a href="perfil.php?<?php echo $_SESSION['id_user']; ?>">Mi Perfil</a></li>
                        
-                        <li onclick="cerrar()" style="cursor: pointer;"><a class="select">Cerrar</a></li>
+                        <li style=" list-style: none;" onclick="cerrar()" style="cursor: pointer;"><a class="select">Cerrar</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -69,7 +72,49 @@ $resulto = $ob -> servicio();
                     <button><li><a href="reporte.php">Estado de cuenta</a></li></button>
                 </div>
                 <div class="container__vector">
-                    <div class="tables">
+                    
+
+                   
+
+                </div>
+            </div>
+        </div>
+    <!-- Fin Portada -->
+        <div class="body" style="display:flex; height:100%; width:100%; justify-content:center; flex-wrap:wrap;" >
+            <div class="botones" style="display:flex; height:100%; width:30%; justify-content:center;">
+            <div class="contenedor">
+			        <h4>¿Cuánto dinero desea ingresar?</h4>
+			    <br>
+			    <br>
+			        <form action="" id="formulario" class="formulario">
+				        <input type="text" value="0" id="link" placeholder="Escribe el monto de dinero" />
+				        <button class="btn" data-toggle="modal" data-target="#exampleModal">Generar QR</button>
+			        </form>
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tu codigo QR</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <div id="contenedorQR" class="contenedorQR">
+                                <h1>Codigo QR:</h1>
+                                <br>
+                                <br>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+            </div>
+            <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:70%">
+        <div class="tables">
                         <div class="table1">
                          <?php foreach($resultado as $row){ ?>
                             <table class="tb_saldo">
@@ -189,10 +234,12 @@ $resulto = $ob -> servicio();
                            
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
-    <!-- Fin Portada -->
+
+        </div>
+
+
+
     <script src="../configuracion/js/app_home.js"></script>
     <script src="../configuracion/js/cerrar.js"></script>
     <script src="../configuracion/js/reporte.js"></script>
