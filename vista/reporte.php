@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include("../modelo/mongoconexion.php");
 include("../modelo/mostrar_tranfer.php");
 $objt = new transferencias();
 $result = $objt -> transferencia();
@@ -54,9 +55,9 @@ $resulta = $obj -> dato();
                     <H2>Cuenta</H2>
                     <p>Estado de Cuenta de <?php echo $_SESSION['nombre']; ?></p>
                     <?php foreach($resulta as $a){ ?>
-                        <p>numero de cuenta: <?php echo $a['num_tarjeta'] ?></p>
-                        <p>clabe interbancaria: <?php echo $a['clabe'] ?></p>
-                        <p>CURP: <?php echo $a['curp'] ?></p>
+                        <p>numero de cuenta: <?php echo $a["num_tarjeta"] ?></p>
+                        <p>clabe interbancaria: <?php echo $a["clabe"] ?></p>
+                        <p>CURP: <?php echo $a["curp"] ?></p>
                     <?php } ?>
                     <button><li><a><?php
                     date_default_timezone_set('America/Monterrey');
@@ -88,10 +89,10 @@ $resulta = $obj -> dato();
                                 <?php if ($result != null) {?>
                                 <?php foreach($result as $r){ ?>
                                     <tr>
-                                        <td id="folio<?php echo $r['id'];?>"><?php echo $r['folio'] ?></td>
-                                        <td id="clabe<?php echo $r['id'];?>"><?php echo $r['clabe'] ?></td>
-                                        <td id="concepto<?php echo $r['id'];?>"><?php echo $r['concepto'] ?></td>
-                                        <td id="monto<?php echo $r['id'];?>">$<?php echo $r['monto'] ?> MX</td>
+                                        <td id="folio<?php echo $r["_id"];?>"><?php echo $r["num_f"] ?></td>
+                                        <td id="clabe<?php echo $r["_id"];?>"><?php echo $r["clabe_rec"] ?></td>
+                                        <td id="concepto<?php echo $r["_id"];?>"><?php echo $r["concepto"] ?></td>
+                                        <td id="monto<?php echo $r["_id"];?>">$<?php echo $r["cantidad"] ?> MX</td>
                                         
                                     </tr>
                                     <?php } ?>
@@ -101,10 +102,10 @@ $resulta = $obj -> dato();
                                     <?php if ($resulto != null) {?>
                                     <?php foreach($resulto as $rs){ ?>
                                     <tr>
-                                        <td><?php echo $rs['servicio'] ?></td>
-                                        <td><?php echo $rs['referencia'] ?></td>
-                                        <td>Pago de: <?php echo $rs['servicio'] ?></td>
-                                        <td>$<?php echo $rs['cantidad'] ?> MX</td>
+                                        <td><?php echo $rs["servicio"] ?></td>
+                                        <td><?php echo $rs["referencia"] ?></td>
+                                        <td>Pago de: <?php echo $rs["servicio"] ?></td>
+                                        <td>$<?php echo $rs["cantidad"] ?> MX</td>
                                         
                                     </tr>
                                     <?php } ?>

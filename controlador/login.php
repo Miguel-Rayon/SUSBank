@@ -11,10 +11,12 @@ $login = new login();
 
 if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
     $result = $login -> inicio_sesion($correo,$pass);
-    if(!empty($resultado)){ 
-        foreach($resultado as $obj){
-            $_SESSION['id_user'] = $obj['_id'];
-            $_SESSION['nombre'] = $obj['nombre'];
+    if(!empty($result)){ 
+        foreach($result as $obj){
+            $_SESSION['id_user'] = $obj["_id"];
+            $_SESSION['nombre'] = $obj["nombre"];
+            $_SESSION['clabe'] = $obj["clabe"];
+            $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
         }
         header("location: ../vista/home.php"); 
     }

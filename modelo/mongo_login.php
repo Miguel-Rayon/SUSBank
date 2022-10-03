@@ -7,7 +7,7 @@
             try {
                 $db = Conexion::conectar();
                 $coleccion = $db -> user;
-                $resultado = $coleccion->findOne(array("correo"=>$correo,"pass"=>$pass));
+                $resultado = $coleccion->find(array("correo"=>$correo,"pass"=>$pass));
                 return $resultado;
             } catch (\Throwable $th) {
                 return $th -> getMessage();

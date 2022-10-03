@@ -1,5 +1,5 @@
-<?php
-session_start();
+<?php session_start();
+include ("../modelo/mongoconexion.php");
 include("../modelo/mostrar_tranfer.php");
 $objt = new transferencias();
 $result = $objt -> transferencia();
@@ -80,9 +80,9 @@ $resulto = $ob -> servicio();
             </div>
         </div>
     <!-- Fin Portada -->
-        <div class="body" style="display:flex; height:100%; width:100%; justify-content:center; flex-wrap:wrap;" >
-            <div class="botones" style="display:flex; height:100%; width:30%; justify-content:center;">
-            <div class="contenedor">
+        <div class="body" style="display:flex; height:100%; width:100%; justify-content:space-around; flex-wrap:wrap; margin:auto;" >
+            <div class="botones" style="display:flex; height:100%; width:50%; justify-content:flex-start; ">
+            <div class="contenedor" style="flex-direction:column; width:100%;">
 			        <h4>¿Cuánto dinero desea ingresar?</h4>
 			    <br>
 			    <br>
@@ -103,7 +103,6 @@ $resulto = $ob -> servicio();
                             <div id="contenedorQR" class="contenedorQR">
                                 <h1>Codigo QR:</h1>
                                 <br>
-                                <br>
                             </div>
                             </div>
                             <div class="modal-footer">
@@ -113,7 +112,7 @@ $resulto = $ob -> servicio();
                         </div>
                         </div>
             </div>
-            <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:70%">
+            <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:100%">
         <div class="tables">
                         <div class="table1">
                          <?php foreach($resultado as $row){ ?>
@@ -131,7 +130,7 @@ $resulto = $ob -> servicio();
                                     <tr>
                                         <td>ㅤㅤ</td>
                                         <td>ㅤㅤ</td>
-                                        <td> <?php echo $row['saldo'] ?> MX</td>
+                                        <td> <?php echo $row["saldo"] ?> MX</td>
                                         <td>ㅤㅤ</td>
                                         <td>ㅤㅤ</td>
                                     </tr>
@@ -156,14 +155,14 @@ $resulto = $ob -> servicio();
                                 <?php if ($result != null) {?>
                                 <?php foreach($result as $r){ ?>
                                     <tr>
-                                        <td id="folio<?php echo $r['id'];?>"><?php echo $r['folio'] ?></td>
-                                        <td id="clabe<?php echo $r['id'];?>"><?php echo $r['clabe'] ?></td>
-                                        <td id="concepto<?php echo $r['id'];?>"><?php echo $r['concepto'] ?></td>
-                                        <td id="monto<?php echo $r['id'];?>">$<?php echo $r['monto'] ?> MX</td>
-                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $r['id'] ?>">Ver más</a></li></td> 
+                                        <td id="folio<?php echo $r["_id"];?>"><?php echo $r["num_f"] ?></td>
+                                        <td id="clabe<?php echo $r["_id"];?>"><?php echo $r["clabe_rec"] ?></td>
+                                        <td id="concepto<?php echo $r["_id"];?>"><?php echo $r["concepto"] ?></td>
+                                        <td id="monto<?php echo $r["_id"];?>">$<?php echo $r["cantidad"] ?> MX</td>
+                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $r["_id"] ?>">Ver más</a></li></td> 
                                     </tr>
                                         <!-- The Modal -->
-                                        <div class="modal fade" id="modal<?php echo $r['id'] ?>">
+                                        <div class="modal fade" id="modal<?php echo $r["_id"] ?>">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <!-- Modal Header -->
@@ -175,14 +174,14 @@ $resulto = $ob -> servicio();
                                                     <div class="modal-body">
                                                     <div class="form-group">
                                                     <label>Folio:</label>
-                                                    <input type="text" class="form-control" value="<?php echo $r['folio'] ?>" id="folio<?php echo $r['id'];?>" readonly="readonly">
+                                                    <input type="text" class="form-control" value="<?php echo $r["num_f"] ?>" id="folio<?php echo $r["id"];?>" readonly="readonly">
                                                     <label>clabe:</label>
-                                                    <input type="text" class="form-control" value="<?php echo $r['clabe'] ?>" id="clabe<?php echo $r['id'];?>" readonly="readonly">
+                                                    <input type="text" class="form-control" value="<?php echo $r["clabe_rec"] ?>" id="clabe<?php echo $r["id"];?>" readonly="readonly">
                                                     <label>concepto:</label>
-                                                    <input type="text" class="form-control" value="<?php echo $r['concepto'] ?>" id="concepto<?php echo $r['id'];?>" readonly="readonly">
+                                                    <input type="text" class="form-control" value="<?php echo $r["concepto"] ?>" id="concepto<?php echo $r["id"];?>" readonly="readonly">
                                                     <label>monto (MX):</label>
-                                                    <input type="number" class="form-control" value="<?php echo $r['monto'] ?>" id="monto<?php echo $r['id'];?>" readonly="readonly">
-                                                    <input type="hidden" id="id<?php echo $r['id'] ?>" value="<?php echo $r['id'] ?>">
+                                                    <input type="number" class="form-control" value="<?php echo $r["cantidad"] ?>" id="monto<?php echo $r["id"];?>" readonly="readonly">
+                                                    <input type="hidden" id="id<?php echo $r["id"] ?>" value="<?php echo $r["id"] ?>">
                                                     </div>
                                                     </div>
                                                 </div>
@@ -195,14 +194,14 @@ $resulto = $ob -> servicio();
                                     <?php if ($resulto != null) {?>
                                     <?php foreach($resulto as $rs){ ?>
                                     <tr>
-                                        <td id="servicios<?php echo $rs['id_servicio'];?>"><?php echo $rs['servicio'] ?></td>
-                                        <td id="referencia<?php echo $rs['id_servicio'];?>"><?php echo $rs['referencia'] ?></td>
-                                        <td id="servicio<?php echo $rs['id_servicio'];?>">Pago de: <?php echo $rs['servicio'] ?></td>
-                                        <td id="cantidad<?php echo $rs['id_servicio'];?>">$<?php echo $rs['cantidad'] ?> MX</td>
-                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $rs['id_servicio'] ?>">Ver más</a></li></td>
+                                        <td id="servicios<?php echo $rs["_id"];?>"><?php echo $rs["servicio"] ?></td>
+                                        <td id="referencia<?php echo $rs["_id"];?>"><?php echo $rs["referencia"] ?></td>
+                                        <td id="servicio<?php echo $rs["_id"];?>">Pago de: <?php echo $rs["servicio"] ?></td>
+                                        <td id="cantidad<?php echo $rs["_id"];?>">$<?php echo $rs["cantidad"] ?> MX</td>
+                                        <td><li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $rs["_id"] ?>">Ver más</a></li></td>
                                     </tr>
                                      <!-- The Modal -->
-                                     <div class="modal fade" id="modal<?php echo $rs['id_servicio'] ?>">
+                                     <div class="modal fade" id="modal<?php echo $rs["_id"] ?>">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <!-- Modal Header -->
@@ -214,12 +213,12 @@ $resulto = $ob -> servicio();
                                                     <div class="modal-body">
                                                     <div class="form-group">
                                                     <label>Servicio:</label>
-                                                    <input type="text" class="form-control" value="<?php echo $rs['servicio'] ?>" id="folio<?php echo $rs['id_servicio'];?>" readonly="readonly">
+                                                    <input type="text" class="form-control" value="<?php echo $rs["servicio"] ?>" id="folio<?php echo $rs["_id"];?>" readonly="readonly">
                                                     <label>Referencia:</label>
-                                                    <input type="text" class="form-control" value="<?php echo $rs['referencia'] ?>" id="referencia<?php echo $rs['id_servicio'];?>" readonly="readonly">
+                                                    <input type="text" class="form-control" value="<?php echo $rs["referencia"] ?>" id="referencia<?php echo $rs["_id"];?>" readonly="readonly">
                                                     <label>Cantidad (MX):</label>
-                                                    <input type="text" class="form-control" value="<?php echo $rs['cantidad'] ?>" id="cantidad<?php echo $rs['id_servicio'];?>" readonly="readonly">
-                                                    <input type="hidden" id="id<?php echo $rs['id'] ?>" value="<?php echo $rs['id_servicio'] ?>">
+                                                    <input type="text" class="form-control" value="<?php echo $rs["cantidad"] ?>" id="cantidad<?php echo $rs["_id"];?>" readonly="readonly">
+                                                    <input type="hidden" id="id<?php echo $rs["_id"] ?>" value="<?php echo $rs["_id"] ?>">
                                                     </div>
                                                     </div>
                                                 </div>

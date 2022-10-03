@@ -1,34 +1,38 @@
 <?php 
-include 'conexion.php';
-
 class transferir{
-    private $db; //database
-    private $lista;
-
-    public function __construct(){
-        $this->db = conexion::conn();
-        $this->arraydb = array();
-     }
-    public function transferencia ($num_f,$clabe_rec,$cantidad,$concepto){
-        $resultado = $this->db->query("INSERT INTO transferencia (folio,clabe,monto,concepto,id_user) VALUES ('$num_f', '$clabe_rec','$cantidad','$concepto', '".$_SESSION['id_user']."')");
-        $validar = $this->db->query("SELECT EXISTS(SELECT * FROM usuarios WHERE clabe = $clabe_rec)");
-        $v = mysqli_fetch_row($validar);
-        if ($v[0]=="1") {                 
-            $result= $this->db->query("SELECT * FROM usuarios where id_user='".$_SESSION['id_user']."'");
-            foreach($result as $row){
-            $r =  $row['saldo'] - $cantidad;}
-            $modificar = $this->db->query("UPDATE usuarios SET saldo = $r WHERE id_user='".$_SESSION['id_user']."'");
-            $aumento= $this->db->query("SELECT * FROM usuarios where clabe = $clabe_rec ");
-            foreach($aumento as $au){
-            $s = $au['saldo'] + $cantidad;}
-            $aum = $this->db->query("UPDATE usuarios SET saldo = $s WHERE clabe = $clabe_rec");
-        }else{
-            $result= $this->db->query("SELECT * FROM usuarios where id_user='".$_SESSION['id_user']."'");
-            foreach($result as $row){
-            $r =  $row['saldo'] - $cantidad;}
-            $modificar = $this->db->query("UPDATE usuarios SET saldo = $r WHERE id_user='".$_SESSION['id_user']."'");
-        }
-        
-    }
-} 
+    public function transferencia ($num_f,$clabe_rec,$clabe_env,$cantidad,$concepto){
+        try {
+            $db = Conexion::conectar();
+            $coleccion = $db -> transferencia;
+            $con = $db -> user;
+            $cant = (int)$cantidad;
+            $res = $coleccion -> insertOne(array("num_f"=>$num_f,"clabe_rec"=>$clabe_rec,"clabe_env"=>$clabe_env,"cantidad"=>$cant,"concepto"=>$concepto,"id_user"=>$_SESSION['id_user']));
+            $result = $con->findOne(array("clabe" => $clabe_rec));
+            $resulto = $con->findOne(array("clabe"=>$clabe_env));
+            if(!empty($result)){
+                foreach($result as $aum){
+                    $actID = $aum["_id"];
+                    $aumInt = (int)$aum["saldo"];
+                    $newsaldo = $aumInt + $cant;
+                }
+                $suma = $con -> update(["_id" => $actID], ["saldo"=>$newsaldo]);
+                
+                foreach($resulto as $rest){
+                    $restInt = (int)$rest["saldo"];
+                    $restSaldo = $restInt - $cant;
+                }
+                $resta = $con -> update(["_id"=>$_SESSION['id_user']],["saldo"=>$restSaldo]);
+            }else{
+                foreach($resulto as $rest){
+                    $restInt = (int)$rest["saldo"];
+                    $restSaldo = $restInt - $cant;
+                }
+                $resta = $con -> update(["_id"=>$_SESSION['id_user']],["saldo"=>$restSaldo]);
+            }
+            return $res;
+         } catch (\Throwable $th) {
+            return $th -> getMessage();
+         }
+    
+} }
 ?>
