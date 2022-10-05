@@ -7,6 +7,23 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+body::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
 .container__all{
     position: relative;
     right: 0;
@@ -523,5 +540,3 @@ footer{
     width: 390px;
     animation: move_vector 6s ease-in-out infinite;
 }
-
-

@@ -1,27 +1,31 @@
-<?php
-session_start();
-$correo = $_POST['correo'];
-$pass = $_POST['pass'];
+<?php session_start();
+include ("../modelo/mongoconexion.php");
+include("../modelo/mongo_login.php");
 
-include("../modelo/login.php");
-$obj = new Login();
-$resultado = $obj -> inicio_sesion($correo,$pass);
+$correo = $_POST['correo_login'];
+$pass = $_POST['pass_login'];
 
-if(empty($resultado)){
-    exit(json_encode([
-        "status" => "2"
-    ]));
-}else{
-    foreach($resultado as $r){
-        $nombre = $r['nombre'];
+$login = new login();
+
+
+
+if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
+    $result = $login -> inicio_sesion($correo,$pass);
+    if(!empty($result)){ 
+        foreach($result as $obj){
+            $_SESSION['id_user'] = $obj["_id"];
+            $_SESSION['nombre'] = $obj["nombre"];
+            $_SESSION['clabe'] = $obj["clabe"];
+            $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
+        }
+        header("location: ../vista/home.php"); 
     }
-    $_SESSION['login'] = "ok";
-    $_SESSION['nombre'] =  $nombre;
-    $url = "home.php";
-    exit(json_encode([
-        "status" => "1",
-        "nombre" => $nombre,
-        "url" => "$url"
-    ]));
+    else{
+        echo "Wrong combination of username and password";
+    }
+}else{
+    echo "no ingresar datos vacios";
 }
+
+
 ?>

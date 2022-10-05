@@ -1,5 +1,5 @@
 /**
- * Animacion del scroll para que se vea chingon xd
+ * Animacion del scroll 
  */
 window.onscroll = function(){
     scroll = document.documentElement.scrollTop;

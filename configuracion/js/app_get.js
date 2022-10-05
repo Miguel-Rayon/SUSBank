@@ -9,7 +9,7 @@ function get(){
         
       }).then((result) => {
         if (result.isConfirmed) {
-            window.location.replace("login")
+            window.location.replace("login.php")
         }
     })
 }

@@ -6,6 +6,11 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+.tablesinfo{
+    display:flex;
+    flex-direction: column;
+    max-width: 800px;
+}
 .table1, .table2{
     display: flex;
     justify-content: center;
@@ -88,6 +93,46 @@ button li{
 }
 button li a{
     color: white;
+}
+.contenedor {
+	max-width: 100%;
+	width: 480px;
+	margin: 20px   30px   40px;
+	float: left;
+}
+
+.formulario input[type='text'] {
+	padding: 20px;
+	border: none;
+	background: #fff;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+.formulario.h1{
+	text-align: center;
+}
+
+.formulario .btn {
+	width: 100%;
+	border: none;
+    background: black;
+	color: white;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+
+.contenedorQR {
+	max-width: 100%;
+	width: 480px;
+	margin: 20px   30px   40px;
+	float: right;
 }
 @media screen and (max-width: 870px){
 .tables{
