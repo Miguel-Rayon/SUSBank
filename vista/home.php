@@ -69,7 +69,7 @@ $resulto = $ob -> servicio();
                     <h1>Bienvenido</h1>
                     <H2>Usuario</H2>
                     <p>Que tal <?php echo $_SESSION['nombre']; ?> que es la realizaras hoy? SUS BANK esta a tu servicio, si necesitas ayuda acude al apartado de ayuda</p>
-                    <button><li><a href="reporte.php">Estado de cuenta</a></li></button>
+                    <button><li style="list-style: none;"><a style="list-style: none;" href="reporte.php">Estado de cuenta</a></li></button>
                 </div>
                 <div class="container__vector">
                     
@@ -83,11 +83,8 @@ $resulto = $ob -> servicio();
         <div class="body" style="display:flex; height:100%; width:100%; justify-content:space-around; flex-wrap:wrap; margin:auto;" >
             <div class="botones" style="display:flex; height:100%; width:50%; justify-content:flex-start; ">
             <div class="contenedor" style="flex-direction:column; width:100%;">
-			        <h4>¿Cuánto dinero desea ingresar?</h4>
-			    <br>
-			    <br>
 			        <form action="" id="formulario" class="formulario">
-				        <input type="text" value="0" id="link" placeholder="Escribe el monto de dinero" />
+				        <input type="hidden" value="0" id="link" placeholder="Escribe el monto de dinero" />
 				        <button class="btn" data-toggle="modal" data-target="#exampleModal">Generar QR</button>
 			        </form>
                     
