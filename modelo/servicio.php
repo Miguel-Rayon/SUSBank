@@ -1,13 +1,13 @@
 <?php 
 class servicios{
 
-     public function servicio($servicios,$cantidad_servicio,$referencia){
+     public function servicio($servicios,$cantidad_servicio,$referencia,$fecha){
       try {
         $db = Conexion::conectar();
         $coleccion = $db -> servicio;
         $conn=$db ->user;
         $cantidad = (int)$cantidad_servicio;
-        $resultado=$coleccion -> insertOne(array("servicio"=>$servicios,"cantidad"=>$cantidad,"referencia"=>$referencia,"id_user"=>$_SESSION['id_user']));
+        $resultado=$coleccion -> insertOne(array("servicio"=>$servicios,"cantidad"=>$cantidad,"referencia"=>$referencia,"id_user"=>$_SESSION['id_user'],"fecha"=>$fecha));
         return $resultado;
         $resulta = $conn -> find(array($_SESSION['id_user']));
         if(!$resulta){

@@ -45,7 +45,7 @@ $_SESSION['id_user'];
               <div class="input-field">
                 <i class="fas fa-user"></i>
                 <input list="servicio" placeholder="Servicio a pagar" name="servicios" id="servicios" />
-                <datalist name="servicio" id="servicio">
+                <datalist name="servicio" id="servicio" >
                     <option value="CFE">
                     <option value="Agua y Drenaje">
                     <option value="TELMEX">

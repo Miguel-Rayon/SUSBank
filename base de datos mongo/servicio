@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "634758cdccb81eec5f0a6c03"
+  },
+  "servicio": "CFE",
+  "cantidad": 200,
+  "referencia": "12345678",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 07:16:13 pm"
+},{
+  "_id": {
+    "$oid": "63475a60b41dca03d0011f72"
+  },
+  "servicio": "Agua y Drenaje",
+  "cantidad": 100,
+  "referencia": "2",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 07:22:56 pm"
+},{
+  "_id": {
+    "$oid": "63476ed2ccb81eec5f0a6c04"
+  },
+  "servicio": "IZZI",
+  "cantidad": 350,
+  "referencia": "12345678",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 08:50:10 pm"
+},{
+  "_id": {
+    "$oid": "63476fc11288deb6ba06b772"
+  },
+  "servicio": "TELMEX",
+  "cantidad": 200,
+  "referencia": "12345678",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 08:54:09 pm"
+}]

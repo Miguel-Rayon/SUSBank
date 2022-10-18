@@ -18,7 +18,12 @@ if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
             $_SESSION['clabe'] = $obj["clabe"];
             $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
         }
-        header("location: ../vista/home.php"); 
+        if($correo == $obj["correo"] AND $pass == $obj["pass"]){
+            header("location: ../vista/home.php");
+        }else{
+            echo "Contraseña y/o correo incorrecto";
+        }
+         
     }
     else{
         echo "Wrong combination of username and password";

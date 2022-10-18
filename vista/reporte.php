@@ -33,7 +33,7 @@ $resulta = $obj -> dato();
 <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.png" alt="logo">
+                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
@@ -61,7 +61,7 @@ $resulta = $obj -> dato();
                     <?php } ?>
                     <button><li><a><?php
                     date_default_timezone_set('America/Monterrey');
-                    $DateAndTime = date('m-d-Y h:i:s a', time());  
+                    $DateAndTime = date('m-d-Y h:i:s a', time());   
                     echo "Fecha y Hora de consulta de estado de cuenta $DateAndTime.";
                     ?></a></li></button>
                 </div>

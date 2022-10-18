@@ -9,7 +9,7 @@
                 $db="susbank";
                 $puerto="27017";
 
-                $cadenaConexion="mongodb://" . $usuario . ":" . $password . "@" . $servidor . ":" . $puerto . "/" . $db;
+                $cadenaConexion="mongodb://". $servidor . ":" . $puerto . "/" . $db;
 
                 $cliente = new MongoDB\Client($cadenaConexion);
                 return $cliente -> selectDatabase($db);

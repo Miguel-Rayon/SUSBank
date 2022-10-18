@@ -1,0 +1,21 @@
+mongod
+
+use susbank  <--Nombre de la base de datos a crear
+
+db.createUser(
+  {
+    user :  "mongoadmin",
+    pwd :  "123456",
+    roles :  [
+        {  role :  "readWrite",  db :  "crud"  }
+    ]
+  }
+);
+
+exit
+
+mongod
+
+mongo -u  mongoadmin -p 123456 --authenticationDatabase susbank
+
+insertar colecciones de la base de datos.

@@ -40,7 +40,7 @@
                 <i class="fa-solid fa-address-card"></i>
                 <input type="text" placeholder="CURP" id="curp" name="curp"/>
               </div>
-              <li style="list-style: none;"><a style="  color: #373737; font-size: 15px; text-decoration: none;" href="https://www.gob.mx/curp/">Click para consultar tu CURP</a></li>
+              <li style="list-style: none;"><a style="color: #373737; font-size: 15px; text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://www.gob.mx/curp/">Click para consultar tu CURP</a></li>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
                 <input type="email" placeholder="Correo" id="correo" name="correo" />
