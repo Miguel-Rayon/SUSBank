@@ -44,18 +44,18 @@ $resulta = $obj -> dato();
    <div class="container__cards">
    <?php foreach ($resulta as $row) { ?>
         
-        <div class="card">
+        <div class="card" style="margin:25px;">
             <div class="cover">
                 <img src="<?php echo $row["imagen"] ?>" alt="img<?php echo $row["_id"] ?>" style="border-radius:20%;">
                 <div class="img__back"></div>
             </div>
-            <div class="description" style="background-color:#dadcdd;">
+            <div class="description" style="background-color:#dadcdd; min-height:400px; height:100%;">
                 <h2><?php echo $row["title"] ?></h2>
-                <p><?php echo substr($row["subtittle"], 0, -30) ."..."?></p>
-                <input type="button" value="Leer Más">
+                <p> <?php echo $row["subtittle"] ?> </p>
+                <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
+                <li><a href="blog_id.php?<?php $_SESSION['blog'] ?>">Leer Más</a></li>
             </div>
         </div>
-        
     <?php } ?>
    </div>
    <!-- Fin Cards blog -->
