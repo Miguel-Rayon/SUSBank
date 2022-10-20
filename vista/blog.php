@@ -13,6 +13,9 @@ $resulta = $obj -> dato();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_blog.css">
@@ -28,10 +31,10 @@ $resulta = $obj -> dato();
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="index.php" class="select">Inicio</a></li>
-                        <li><a href="login.php">Acceso</a></li>
-                        <li><a href="sobre.php">Sobre Nosotros</a></li>
-                        <li><a href="blog.php">Blog</a></li>
+                        <li><a style="text-decoration: none; color: white;" href="index.php" class="select">Inicio</a></li>
+                        <li><a style="text-decoration: none; color: black;" href="login.php">Acceso</a></li>
+                        <li><a style="text-decoration: none; color: black;" href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a style="text-decoration: none; color: black;" href="blog.php">Blog</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -41,21 +44,47 @@ $resulta = $obj -> dato();
     </header>
    <!-- Fin Barra de navegacion -->
    <!-- Cards del blog-->
-   <div class="container__cards">
+   <div class="container__cards" style="margin-top:10%;">
    <?php foreach ($resulta as $row) { ?>
         
-        <div class="card" style="margin:25px;">
+        <div class="card">
             <div class="cover">
                 <img src="<?php echo $row["imagen"] ?>" alt="img<?php echo $row["_id"] ?>" style="border-radius:20%;">
                 <div class="img__back"></div>
             </div>
             <div class="description" style="background-color:#dadcdd; min-height:400px; height:100%;">
-                <h2><?php echo $row["title"] ?></h2>
+                <h2 style="font-size:20px;"><?php echo $row["title"] ?></h2>
                 <p> <?php echo $row["subtittle"] ?> </p>
                 <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
-                <li><a href="blog_id.php?<?php $_SESSION['blog'] ?>">Leer Más</a></li>
+                <?php $_SESSION["id_blog"] = $row["_id"] ?>
+                <li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $row["_id"] ?>">Ver más</a></li>
             </div>
         </div>
+        <!-- The Modal -->
+        <div class="modal fade" id="modal<?php echo $row["_id"] ?>" style="width:100%;">
+                                                <div class="modal-dialog" style="width:90%;">
+                                                    <div class="modal-content">
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Servicio</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <div style="width: 100%; height:160px; display:flex; justify-content:center; align-items:center; margin:0px 0px 15px 0px;">
+                                                                    <img src="<?php echo $row["imagen"]?>" style="width:90%; height:100%;">
+                                                                </div>
+                                                                <h2><?php echo $row["title"]?></h2>
+                                                                <div style="width:100%; text-align:end;"><p><?php echo $row["date"]?></p></div>
+                                                                <div><p><?php echo $row["body"]?></p></div>
+                                                                
+                                                                <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
     <?php } ?>
    </div>
    <!-- Fin Cards blog -->

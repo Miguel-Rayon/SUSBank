@@ -16,6 +16,7 @@
     max-height: 600px;
     margin: 10px;
     transition: all 300ms;
+    border-color: transparent;
 }
 
 .card:hover{
@@ -49,7 +50,7 @@
     width: 100%;
     height: 200px;
     position: absolute;
-    bottom: -80px;
+    bottom: -60px;
     left: 0;
     background-size: cover;
     border-radius: 20px;
