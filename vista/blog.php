@@ -13,12 +13,10 @@ $resulta = $obj -> dato();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_blog.css">
+    <link rel="stylesheet" href="../configuracion/css/css_modal.css">
     <title>Blog</title>
 </head>
 <body>
@@ -44,7 +42,7 @@ $resulta = $obj -> dato();
     </header>
    <!-- Fin Barra de navegacion -->
    <!-- Cards del blog-->
-   <div class="container__cards" style="margin-top:10%;">
+   <div class="container__cards">
    <?php foreach ($resulta as $row) { ?>
         
         <div class="card">
@@ -57,34 +55,20 @@ $resulta = $obj -> dato();
                 <p> <?php echo $row["subtittle"] ?> </p>
                 <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
                 <?php $_SESSION["id_blog"] = $row["_id"] ?>
-                <li style="cursor: pointer;"><a data-toggle="modal" data-target="#modal<?php echo $row["_id"] ?>">Ver más</a></li>
+                <li style="cursor: pointer; list-style: none;"><a style="text-decoration: none; color: black;" href="#openModal<?php echo $row["_id"] ?>">Ver más</a></li>
             </div>
+            <!-- Modal del blog-->
+            <div id="openModal<?php echo $row["_id"] ?>" class="modalDialog">
+                <div style="width:1000px;">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <div style="width: 100%; text-align:center;" ><h2><?php echo $row["title"] ?></h2></div>
+                    <div style="width:100%; text-align:end;"><p id="fecha<?php echo $row["_id"]; ?>">
+                    <?php echo  DateTime::createFromFormat('Y-m-d\TH:i:sP', $row["date"]) ?></p></div>
+                    <p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
+                </div>
+            </div>
+            <!-- FIN Modal del blog-->
         </div>
-        <!-- The Modal -->
-        <div class="modal fade" id="modal<?php echo $row["_id"] ?>" style="width:100%;">
-                                                <div class="modal-dialog" style="width:90%;">
-                                                    <div class="modal-content">
-                                                        <!-- Modal Header -->
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title">Servicio</h4>
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                        </div>
-                                                        <!-- Modal body -->
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <div style="width: 100%; height:160px; display:flex; justify-content:center; align-items:center; margin:0px 0px 15px 0px;">
-                                                                    <img src="<?php echo $row["imagen"]?>" style="width:90%; height:100%;">
-                                                                </div>
-                                                                <h2><?php echo $row["title"]?></h2>
-                                                                <div style="width:100%; text-align:end;"><p><?php echo $row["date"]?></p></div>
-                                                                <div><p><?php echo $row["body"]?></p></div>
-                                                                
-                                                                <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
     <?php } ?>
    </div>
    <!-- Fin Cards blog -->
