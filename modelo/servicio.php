@@ -5,18 +5,22 @@ class servicios{
       try {
         $db = Conexion::conectar();
         $coleccion = $db -> servicio;
-        $conn=$db ->user;
+        $con=$db -> user;
         $cantidad = (int)$cantidad_servicio;
         $resultado=$coleccion -> insertOne(array("servicio"=>$servicios,"cantidad"=>$cantidad,"referencia"=>$referencia,"id_user"=>$_SESSION['id_user'],"fecha"=>$fecha));
-        return $resultado;
-        $resulta = $conn -> find(array($_SESSION['id_user']));
-        if(!$resulta){
+        $resulta = $con -> find(array("_id"=>$_SESSION['id_user']));
+        
+        if(!empty($resulta)){
           foreach ($resulta as $rest) {
-            $total = (int)$rest["saldo"];
-            $nuevaCantidad = (int)$total - (int)$cantidad;
+            $saldo = (int)$rest["saldo"];
+            $nuevaCantidad = (int)$saldo - (int)$cantidad;
           }
-          $res = $conn ->update(["id"=>$_SESSION['id_user']],["saldo"=>$nuevaCantidad]);
+          $result = $con ->updateMany(array("_id"=>$_SESSION['id_user']), array('$set'=>array("saldo"=>$nuevaCantidad)));
         }
+        
+        return $result;
+        return $resulta;
+        return $resultado;
       } catch (\Throwable $th) {
         return $th -> getMessage();
       }

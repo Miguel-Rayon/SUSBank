@@ -61,10 +61,13 @@ $resulta = $obj -> dato();
             <div id="openModal<?php echo $row["_id"] ?>" class="modalDialog">
                 <div style="width:1000px;">
                     <a href="#close" title="Close" class="close">X</a>
+                    <div style="width:100%; align-items:center; display:flex; justify-content:center;" >
+                    <img style="width: 50%; display:block;" src="<?php echo $row["imagen"]?>" /> 
+                    </div>
                     <div style="width: 100%; text-align:center;" ><h2><?php echo $row["title"] ?></h2></div>
                     <div style="width:100%; text-align:end;"><p id="fecha<?php echo $row["_id"]; ?>">
                     <?php echo  DateTime::createFromFormat('Y-m-d\TH:i:sP', $row["date"]) ?></p></div>
-                    <p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
+                    <p><?php echo $row["body"] ?></p>
                 </div>
             </div>
             <!-- FIN Modal del blog-->

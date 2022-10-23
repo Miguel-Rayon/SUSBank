@@ -9,7 +9,7 @@ class transferir{
             $res = $coleccion -> insertOne(array("num_f"=>$num_f,"clabe_rec"=>$clabe_rec,"clabe_env"=>$clabe_env,"cantidad"=>$cant,"concepto"=>$concepto,"id_user"=>$_SESSION['id_user'],"fecha"=>$fecha));
             $result = $con->find(array("clabe" => $clabe_rec));
             $resulto = $con->find(array("clabe"=>$clabe_env));
-            {/*if(!empty($result)){
+            if(!empty($result)){
                 foreach($result as $aum){
                     echo $aum["_id"];
                     $actID = $aum["_id"];
@@ -24,7 +24,7 @@ class transferir{
                     $restSaldo = (int)$restInt - (int)$cant;
                     
                 }
-                $resta = $con -> updateMany(array("_id"=>$_SESSION['id_user']), array("saldo"=>(int)$restSaldo));
+                $resta = $con -> updateMany(array("_id"=>$_SESSION['id_user']), array('$set'=>array("saldo"=>$restSaldo)));
                 
             }else{
                 foreach($resulto as $rest){
@@ -32,11 +32,11 @@ class transferir{
                     $restSaldo = (int)$restInt - (int)$cant;
                     
                 }
-                $resta = $con -> updateMany(array("_id"=>$_SESSION['id_user']), array("saldo"=>(int)$restSaldo));
+                $resta = $con -> updateMany(array("_id"=>$_SESSION['id_user']), array('$set'=>array("saldo"=>$restSaldo)));
                 
             }
             return $suma;
-        return $resta;*/}
+            return $resta;
             return $result;
             return $resulto;
             return $res;

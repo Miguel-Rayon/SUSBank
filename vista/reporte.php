@@ -38,7 +38,7 @@ $resulta = $obj -> dato();
             <div class="container__nav">
                 <nav id="nav">
                     <ul> 
-                        <li><a id="btnCrearPdf" style="cursor: pointer;" class="select">Generar PDF</a></li>
+                        <li><a id="btnCrearPdf" style="cursor: pointer;" class="select">PDF</a></li>
                         <li><a href="home.php" class="select">Volver</a></li>
                     </ul>
                 </nav>
@@ -56,7 +56,7 @@ $resulta = $obj -> dato();
                     <p>Estado de Cuenta de <?php echo $_SESSION['nombre']; ?></p>
                     <?php foreach($resulta as $a){ ?>
                         <p>numero de cuenta: <?php echo $a["num_tarjeta"] ?></p>
-                        <p>clabe interbancaria: <?php echo $a["clabe"] ?></p>
+                        <p>clabe: <?php echo $a["clabe"] ?></p>
                         <p>CURP: <?php echo $a["curp"] ?></p>
                     <?php } ?>
                     <button><li><a><?php
