@@ -1,8 +1,8 @@
 <?php session_start(); 
-include("../modelo/mongoconexion.php");
-include("../modelo/blog_id.php");
-$obj= new datos();
-$resultado = $obj -> dato();
+ $imagen = $_POST['imagen'];
+ $title = $_POST['title'];
+ $body = $_POST['body'];
+ $date = $_POST['date'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@ $resultado = $obj -> dato();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/sus.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_blog.css">
     <title>Document</title>
@@ -39,12 +39,9 @@ $resultado = $obj -> dato();
         <?php include('ayuda.php') ?>
     </header>
    <!-- Fin Barra de navegacion -->
-    <?php foreach($resultado as $r) {?>
-        <div><h2><?php echo $r["title"]?></h2></div>
-
-
-
-
-    <?php } ?>
+    <?php 
+        echo $title;
+    ?>
+        
 </body>
 </html>

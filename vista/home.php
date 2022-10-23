@@ -36,7 +36,7 @@ $resulto = $ob->servicio();
         });
     </script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/sus.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
     <title>Bienvenido</title>
@@ -47,7 +47,7 @@ $resulto = $ob->servicio();
     <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
+                <img src="../img/logo.png" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
@@ -55,7 +55,7 @@ $resulto = $ob->servicio();
                         <li style=" list-style: none;"><a style="text-decoration: none; color: black;" href="transferencia.php">Transferir</a></li>
                         <li style=" list-style: none;"><a style="text-decoration: none; color: black;" href="perfil.php?<?php echo $_SESSION['id_user']; ?>">Mi Perfil</a></li>
 
-                        <li style=" list-style: none;" onclick="cerrar()" style="cursor: pointer; "><a style="cursor: pointer; text-decoration: none; color: white;" class="select">Cerrar</a></li>
+                        <li style=" list-style: none;" onclick="cerrar()" style="cursor: pointer; "><a style="cursor: pointer; text-decoration: none; color: white;" class="select">Salir</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -82,27 +82,25 @@ $resulto = $ob->servicio();
                 </div>
 
                 <div class="container__vector">
-
-
-
-
+                    <img src="../img/business-vision-animate.svg" alt="portada" type="img/svg" style="width:530px;">
                 </div>
             </div>
         </div>
         <!-- Fin Portada -->
         <div class="body" style="display:flex; height:100%; width:100%; justify-content:space-around; flex-wrap:wrap; margin:auto;">
-            <div class="botones" style="display:flex; height:100%; width:50%; justify-content:flex-start; ">
+             <!-- Modal del qr -->
                 <div class="contenedor" style="flex-direction:column; width:100%;">
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                            <div class="modal-content" style="width:90%;">
                                 <div class="modal-header" style="display: flex; flex-Direction: column; align-items:center;">
                                     <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Tu codigo QR</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     </button>
                                 </div>
-                                <div class="modal-body" style="display: flex; flex-Direction: column; align-items:center;">
-                                    <div id="contenedorQR" class="contenedorQR" style="display: flex; flex-Direction: column; align-items:center;">
+                                <div class="modal-body" style="display: flex; flex-wrap:wrap; align-items:center;">
+                                    <div class="img" style="width:90%; align-items:center;"> <img src="../img/qr-code-animate.svg" alt="qr" style="width:100%;" type="img/svg">  </div>
+                                    <div id="contenedorQR" class="contenedorQR" style="display: flex; flex-Direction: column; align-items:center; width:100%">
                                         <h6>Listo! puedes ir a uno de nuestros cajeros y empezar a retirar dinero :)</h6>
                                         <br>
                                     </div>
@@ -113,7 +111,7 @@ $resulto = $ob->servicio();
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- Fin Modal del qr -->
                 <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:100%">
                     <div class="tables">
                         <div class="table1">

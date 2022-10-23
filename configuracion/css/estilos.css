@@ -57,7 +57,7 @@ header .logo{
     align-items: center;
 }
 .logo img {
-    width: 100px;
+    width: 60%;
 }
 .container__nav{
     position: relative;
@@ -170,21 +170,9 @@ nav ul li a{
 }
 .container__vector img{
     position: absolute;
-    bottom: 10px;
+    bottom: -50px;
     right: 0px;
     width: 600px;
-    animation: move_vector 6s ease-in-out infinite;
-}
-@keyframes move_vector{
-    0%{
-        transform: translateY(10px);
-    }
-    25%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(10px);
-    }
 }
 @media screen and (max-width: 920px){
     .container__vector img{
@@ -403,7 +391,7 @@ footer{
 }
 
 .box__footer .logo img{
-    width: 100px;
+    width: 60%;
 }
 
 .box__footer .terms{
@@ -538,5 +526,5 @@ footer{
     bottom: 10px;
     right: 0px;
     width: 390px;
-    animation: move_vector 6s ease-in-out infinite;
+    
 }

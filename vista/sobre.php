@@ -17,14 +17,14 @@
     <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
+                <img src="../img/logo.png" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
                         <li><a href="index.php" class="select">Inicio</a></li>
                         <li><a href="login.php">Acceso</a></li>
-                        <li><a href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a href="sobre.php">Acerca de</a></li>
                         <li><a href="blog.php">Blog</a></li>
                     </ul>
                 </nav>
@@ -48,7 +48,7 @@
                     <input type="button" value="Get Started" onclick="get()">
                 </div>
                 <div class="container__vector">
-                    <img src="../img/Finance analytics _Monochromatic.svg" alt="portada" type="img/svg">
+                    <img src="../img/team-page-animate.svg" alt="portada" type="img/svg"  style="width:530px;">
                 </div>
             </div>
         </div>

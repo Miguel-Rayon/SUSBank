@@ -33,7 +33,7 @@ $resulta = $obj -> dato();
 <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
+                <img src="../img/logo.png" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">

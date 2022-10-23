@@ -16,7 +16,6 @@ $resulta = $obj -> dato();
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_blog.css">
-    <link rel="stylesheet" href="../configuracion/css/css_modal.css">
     <title>Blog</title>
 </head>
 <body>
@@ -24,14 +23,14 @@ $resulta = $obj -> dato();
         <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
+                <img src="../img/logo.png" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
                         <li><a style="text-decoration: none; color: white;" href="index.php" class="select">Inicio</a></li>
                         <li><a style="text-decoration: none; color: black;" href="login.php">Acceso</a></li>
-                        <li><a style="text-decoration: none; color: black;" href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a style="text-decoration: none; color: black;" href="sobre.php">Acerca de</a></li>
                         <li><a style="text-decoration: none; color: black;" href="blog.php">Blog</a></li>
                     </ul>
                 </nav>
@@ -41,11 +40,27 @@ $resulta = $obj -> dato();
         <?php include('ayuda.php') ?>
     </header>
    <!-- Fin Barra de navegacion -->
+    <!-- Portada -->
+    <div class="container__all" id="container_all">
+        <div class="cover">
+            <div class="container__cover">
+                <div class="container__info">
+                    <h1>Bienvenido</h1>
+                    <H2>al blog</H2>
+                    <p>Aqui podras encontrar informacion util que hemos hecho exclusivamente para ti, desde informacion para tus gastos hasta otros datos de interes de tu cuenta. En SUS BANK pensamos en lo mejor para ti</p>
+                    <input type="button" value="Volver al Inicio">
+                </div>
+                <div class="container__vector">
+                    <img src="../img/posts-animate.svg" alt="portada" type="img/svg">
+                </div>
+            </div>
+        </div>
+    <!-- Fin Portada -->
    <!-- Cards del blog-->
    <div class="container__cards">
    <?php foreach ($resulta as $row) { ?>
         
-        <div class="card">
+        <form class="card" action="blog_id.php?<?php echo $row["_id"] ?>" method="post">
             <div class="cover">
                 <img src="<?php echo $row["imagen"] ?>" alt="img<?php echo $row["_id"] ?>" style="border-radius:20%;">
                 <div class="img__back"></div>
@@ -54,24 +69,14 @@ $resulta = $obj -> dato();
                 <h2 style="font-size:20px;"><?php echo $row["title"] ?></h2>
                 <p> <?php echo $row["subtittle"] ?> </p>
                 <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
-                <?php $_SESSION["id_blog"] = $row["_id"] ?>
-                <li style="cursor: pointer; list-style: none;"><a style="text-decoration: none; color: black;" href="#openModal<?php echo $row["_id"] ?>">Ver más</a></li>
+                <input type="hidden" id="imagen<?php echo $row["_id"] ?>" value="<?php echo $row["imagen"] ?>" name="imagen">
+                <input type="hidden" id="title<?php echo $row["_id"] ?>" value="<?php echo $row["title"] ?>" name="title">
+                <input type="hidden" id="body<?php echo $row["_id"] ?>" value="<?php echo $row["body"]?>" name="body">
+                <input type="hidden" id="date<?php echo $row["_id"] ?>" value="<?php echo $row["date"]?>" name="date">
+                <input type="submit" value="Ver mas" id="enviar<?php echo $row["_id"] ?>">
             </div>
-            <!-- Modal del blog-->
-            <div id="openModal<?php echo $row["_id"] ?>" class="modalDialog">
-                <div style="width:1000px;">
-                    <a href="#close" title="Close" class="close">X</a>
-                    <div style="width:100%; align-items:center; display:flex; justify-content:center;" >
-                    <img style="width: 50%; display:block;" src="<?php echo $row["imagen"]?>" /> 
-                    </div>
-                    <div style="width: 100%; text-align:center;" ><h2><?php echo $row["title"] ?></h2></div>
-                    <div style="width:100%; text-align:end;"><p id="fecha<?php echo $row["_id"]; ?>">
-                    <?php echo  DateTime::createFromFormat('Y-m-d\TH:i:sP', $row["date"]) ?></p></div>
-                    <p><?php echo $row["body"] ?></p>
-                </div>
-            </div>
-            <!-- FIN Modal del blog-->
-        </div>
+           
+   </form>
     <?php } ?>
    </div>
    <!-- Fin Cards blog -->
