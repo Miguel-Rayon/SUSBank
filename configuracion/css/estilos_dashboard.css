@@ -98,7 +98,7 @@ button li a{
 	max-width: 100%;
 	width: 480px;
 	margin: 20px   30px   40px;
-	float: left;
+	
 }
 
 .formulario input[type='text'] {
@@ -131,22 +131,31 @@ button li a{
 .contenedorQR {
 	max-width: 100%;
 	width: 480px;
-	margin: 20px   30px   40px;
+	margin: 20px;
 	float: right;
 }
-@media screen and (max-width: 870px){
-.tables{
-    transform: scale(0.7);
-}
-}
-@media screen and (max-width: 500px){
-    .tables{
-        transform: scale(0.9);
+ /*
+Full screen Modal 
+*/
+.fullscreen-modal .modal-dialog {
+    margin: 20% 0px 0px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .fullscreen-modal .modal-dialog {
+      width: 750px;
     }
- }
- @media screen and (max-width: 445px){
-    .tables{
-        transform: scale(0.8);
+  }
+  @media (min-width: 992px) {
+    .fullscreen-modal .modal-dialog {
+      width: 970px;
     }
- }
+  }
+  @media (min-width: 1200px) {
+    .fullscreen-modal .modal-dialog {
+       width: 1170px;
+    }
+  }
 

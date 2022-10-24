@@ -89,17 +89,15 @@ $resulto = $ob->servicio();
         <!-- Fin Portada -->
         <div class="body" style="display:flex; height:100%; width:100%; justify-content:space-around; flex-wrap:wrap; margin:auto;">
              <!-- Modal del qr -->
-                <div class="contenedor" style="flex-direction:column; width:100%;">
+                
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content" style="width:90%;">
-                                <div class="modal-header" style="display: flex; flex-Direction: column; align-items:center;">
+                                <div class="modal-header" style=" align-items:center;">
                                     <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Tu codigo QR</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    </button>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body" style="display: flex; flex-wrap:wrap; align-items:center;">
-                                    <div class="img" style="width:90%; align-items:center;"> <img src="../img/qr-code-animate.svg" alt="qr" style="width:100%;" type="img/svg">  </div>
                                     <div id="contenedorQR" class="contenedorQR" style="display: flex; flex-Direction: column; align-items:center; width:100%">
                                         <h6>Listo! puedes ir a uno de nuestros cajeros y empezar a retirar dinero :)</h6>
                                         <br>
@@ -112,6 +110,7 @@ $resulto = $ob->servicio();
                         </div>
                     </div>
                 <!-- Fin Modal del qr -->
+                <div class="contenedor" style="flex-direction:column; width:100%;">
                 <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:100%">
                     <div class="tables">
                         <div class="table1">
@@ -164,8 +163,8 @@ $resulto = $ob->servicio();
                                                 </td>
                                             </tr>
                                             <!-- The Modal -->
-                                            <div class="modal fade" id="modal<?php echo $r["_id"] ?>">
-                                                <div class="modal-dialog">
+                                            <div class="modal fullscreen-modal fade" id="modal<?php echo $r["_id"] ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <!-- Modal Header -->
                                                         <div class="modal-header">
@@ -185,7 +184,7 @@ $resulto = $ob->servicio();
                                                                 <input type="number" class="form-control" value="<?php echo $r["cantidad"] ?>" id="monto<?php echo $r["_id"]; ?>" readonly="readonly">
                                                                 <label>Fecha de tranferencia: </label>
                                                                 <input type="text" class="form-control" value="<?php echo $r["fecha"] ?>" id="fecha<?php echo $r["_id"]; ?>" readonly="readonly">
-                                                                <input type="hidden" id="id<?php echo $r["_id"] ?>" value="<?php echo $r["id"] ?>">
+                                                                <input type="hidden" id="id<?php echo $r["_id"] ?>" value="<?php echo $r["_id"] ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -207,8 +206,8 @@ $resulto = $ob->servicio();
                                                 </td>
                                             </tr>
                                             <!-- The Modal -->
-                                            <div class="modal fade" id="modal<?php echo $rs["_id"] ?>">
-                                                <div class="modal-dialog">
+                                            <div class="modal fullscreen-modal fade" id="modal<?php echo $rs["_id"] ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <!-- Modal Header -->
                                                         <div class="modal-header">
@@ -219,7 +218,7 @@ $resulto = $ob->servicio();
                                                         <div class="modal-body">
                                                             <div class="form-group">
                                                                 <div style="width: 100%; height:160px; display:flex; justify-content:center; align-items:center;">
-                                                                    <img src="../img/<?php echo $rs["servicio"] ?>.png" style="width:90%; height:100%;">
+                                                                    <img src="../img/<?php echo $rs["servicio"] ?>.png" style="width:90%; height:100%;" id="imagen<?php echo $rs["_id"]; ?>" class="img-fluid" >
                                                                 </div>
                                                                 <label>Servicio:</label>
                                                                 <input type="text" class="form-control" value="<?php echo $rs["servicio"] ?>" id="folio<?php echo $rs["_id"]; ?>" readonly="readonly">
@@ -252,7 +251,6 @@ $resulto = $ob->servicio();
 
             <script src="../configuracion/js/app_home.js"></script>
             <script src="../configuracion/js/cerrar.js"></script>
-            <script src="../configuracion/js/reporte.js"></script>
 </body>
 
 </html>
