@@ -9,21 +9,20 @@
 .tablesinfo{
     display:flex;
     flex-direction: column;
-    max-width: 800px;
+    margin:0px;
+   
 }
 .table1, .table2{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px;
+    margin:0px;
 }
 
 .tables{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
+    flex-direction: column;
     max-width: 1200px;
     margin: auto;
 }
@@ -95,11 +94,12 @@ button li a{
     color: white;
 }
 .contenedor {
+
 	max-width: 100%;
 	width: 480px;
 	margin: 20px   30px   40px;
-	
 }
+
 
 .formulario input[type='text'] {
 	padding: 20px;
@@ -134,6 +134,7 @@ button li a{
 	margin: 20px;
 	float: right;
 }
+
  /*
 Full screen Modal 
 */
