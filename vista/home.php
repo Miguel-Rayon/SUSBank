@@ -86,25 +86,22 @@ $resulto = $ob->servicio();
                 </div>
             </div>
         </div>
-        <!-- Fin Portada -->
-        <div class="body" style="display:flex; height:100%; width:100%; justify-content:space-around; flex-wrap:wrap; margin:auto;">
-             <!-- Modal del qr -->
-                <div class="contenedor" style="flex-direction:column; width:100%;">
+        <!-- Modal del qr -->
+        
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <div class="modal-content" style="width:90%;">
-                                <div class="modal-header" style="display: flex; flex-Direction: column; align-items:center;">
+                            <div class="modal-content">
+                                <div class="modal-header" style="text-align:center;">
                                     <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;">Tu codigo QR</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    </button>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body" style="display: flex; flex-wrap:wrap; align-items:center;">
-                                    <div class="img" style="width:90%; align-items:center;"> <img src="../img/qr-code-animate.svg" alt="qr" style="width:100%;" type="img/svg">  </div>
                                     <div id="contenedorQR" class="contenedorQR" style="display: flex; flex-Direction: column; align-items:center; width:100%">
                                         <h6>Listo! puedes ir a uno de nuestros cajeros y empezar a retirar dinero :)</h6>
                                         <br>
                                     </div>
-                                </div>
+                                    </div>
+                                
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 </div>
@@ -112,7 +109,11 @@ $resulto = $ob->servicio();
                         </div>
                     </div>
                 <!-- Fin Modal del qr -->
-                <div class="tablesinfo" style="display: flex; flex-direction:column; height:100%; width:100%">
+        <!-- Fin Portada -->
+        <div class="contenedor" style="display:flex; flex-direction:column; width:100%;">
+        <div class="body" style="width:90%; align-items:center; margin:0px;">
+             
+                <div class="tablesinfo">
                     <div class="tables">
                         <div class="table1">
                             <?php foreach ($resultado as $row) { ?>
@@ -252,7 +253,6 @@ $resulto = $ob->servicio();
 
             <script src="../configuracion/js/app_home.js"></script>
             <script src="../configuracion/js/cerrar.js"></script>
-            <script src="../configuracion/js/reporte.js"></script>
 </body>
 
 </html>
