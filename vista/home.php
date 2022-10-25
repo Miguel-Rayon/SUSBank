@@ -30,12 +30,14 @@ $resulto = $ob->servicio();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"></script>
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();
         });
     </script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="../img/sus.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_dashboard.css">
@@ -144,7 +146,7 @@ $resulto = $ob->servicio();
                         </div>
                         <div class="table2">
 
-                            <table class="tb_historial" id="myTable">
+                            <table class="tb_historial" class="display responsive nowrap" id="myTable">
                                 <thead>
                                     <tr>
                                         <th>Folio/Servicio</th>
