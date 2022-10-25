@@ -17,7 +17,7 @@
 <body>
 <div class="container">
     <div class="contacto">
-        <form method="post" action="https://formsubmit.co/97945af55d1f5f89dd60814bd41bbd9c">
+        <form method="post" action="https://formcarry.com/s/nI5dwAwkC" accept-charset="UTF-8">
         <h2 class="title">Envianos un correo</h2>
               <div class="input-field">
                 <i class="fa fa-user"></i>
@@ -31,10 +31,12 @@
                 <i class="fa fa-pencil-square-o"></i>
                 <textarea name="mensaje" id="mensaje" placeholder="coloca tu mensaje" rows="3" name="mensaje"></textarea>
               </div>
+              <input type="hidden" name="_gotcha">
               <button type="submit" class="boton">Enviar Correo</button>
               <button type="reset" class="boton" style="margin-top: 10px;">Limpiar</button>
               <button class="boton" style="margin-top: 10px;"><a style="color: #fff; text-transform: uppercase; font-weight: 600; text-decoration: none;" href="javascript: history.go(-1)">Volver</a></button>
-        </form>
+
+            </form>
     </div>
 </div>
 <script src="enviar_correo.js"></script>
