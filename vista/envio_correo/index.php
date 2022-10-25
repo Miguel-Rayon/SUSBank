@@ -39,6 +39,5 @@
             </form>
     </div>
 </div>
-<script src="enviar_correo.js"></script>
 </body>
 </html>
