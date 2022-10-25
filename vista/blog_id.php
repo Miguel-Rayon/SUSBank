@@ -22,7 +22,7 @@
     <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.jpeg" style="height:90%; width:95%;" alt="logo">
+                <img src="../img/logo.png" alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
@@ -39,6 +39,13 @@
         <?php include('ayuda.php') ?>
     </header>
    <!-- Fin Barra de navegacion -->
+    <div class="container" style="width:100%; display:flex; flex-direction:column;">
+            <div class="containerimg" style="width:100%; align-items:center; display:flex; justify-content:center; padding:10px; margin-top:80px;" >
+                <img src="<?php echo $imagen; ?>" alt="BancoImagen" style="width:95%; display:block; border-radius:5px;">
+            </div>
+
+    </div>
+
     <?php 
         echo $title;
     ?>
