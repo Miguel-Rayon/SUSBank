@@ -70,6 +70,7 @@ $resulta = $obj -> dato();
                 <p> <?php echo $row["subtittle"] ?> </p>
                 <input type="hidden" id="id<?php echo $row["_id"] ?>" value="<?php echo $row["_id"] ?>">
                 <input type="hidden" id="imagen<?php echo $row["_id"] ?>" value="<?php echo $row["imagen"] ?>" name="imagen">
+                <input type="hidden" id="imagenc<?php echo $row["_id"] ?>" value="<?php echo $row["imagencover"] ?>" name="imagencover">
                 <input type="hidden" id="title<?php echo $row["_id"] ?>" value="<?php echo $row["title"] ?>" name="title">
                 <input type="hidden" id="body<?php echo $row["_id"] ?>" value="<?php echo $row["body"]?>" name="body">
                 <input type="hidden" id="date<?php echo $row["_id"] ?>" value="<?php echo $row["date"]?>" name="date">

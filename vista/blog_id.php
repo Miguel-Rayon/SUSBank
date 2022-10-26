@@ -3,6 +3,7 @@
  $title = $_POST['title'];
  $body = $_POST['body'];
  $date = $_POST['date'];
+ $cover = $_POST['imagencover'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/sus.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
     <link rel="stylesheet" href="../configuracion/css/estilos_blog.css">
-    <title>Document</title>
+    <title>Blog</title>
 </head>
 <body>
 <!-- Barra de navegacion -->
@@ -29,7 +30,7 @@
                     <ul>
                         <li><a href="index.php" class="select">Inicio</a></li>
                         <li><a href="login.php">Acceso</a></li>
-                        <li><a href="sobre.php">Sobre Nosotros</a></li>
+                        <li><a href="sobre.php">Acerca de</a></li>
                         <li><a href="blog.php">Blog</a></li>
                     </ul>
                 </nav>
@@ -40,15 +41,16 @@
     </header>
    <!-- Fin Barra de navegacion -->
     <div class="container" style="width:100%; display:flex; flex-direction:column;">
-            <div class="containerimg" style="width:100%; align-items:center; display:flex; justify-content:center; padding:10px; margin-top:80px;" >
-                <img src="<?php echo $imagen; ?>" alt="BancoImagen" style="width:95%; display:block; border-radius:5px;">
+            <div class="containerimg" style="width:100%; align-items:center; display:flex; justify-content:center; padding:10px; margin-top:80px; margin-bottom:18px;" >
+                <img src="<?php echo $cover; ?>" alt="BancoImagen" style="width:95%; display:block; border-radius:5px;">
             </div>
-
+        <h2 style="font-size: 40px;font-weight: 900;color: #373737; text-align:center;"><?php echo $title;?></h2> <br/>
+        <div class="texto" style="width:80%; display:flex; flex-direction:column; margin:auto;">
+            <p><?php echo $body ?></p>
+        </div>
     </div>
 
-    <?php 
-        echo $title;
-    ?>
-        
+    
+        <script src="../configuracion/js/app_blog.js"></script>
 </body>
 </html>
