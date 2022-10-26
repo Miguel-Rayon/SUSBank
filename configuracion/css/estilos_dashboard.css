@@ -6,12 +6,6 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-.tablesinfo{
-    display:flex;
-    flex-direction: column;
-    margin:0px;
-   
-}
 .table1, .table2{
     display: flex;
     justify-content: center;
@@ -23,7 +17,7 @@
 .tables{
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
 }
 .tables .table1 .tb_saldo{
@@ -32,8 +26,7 @@
     background:white;
     border-radius:6px;
     overflow:hidden;
-    max-width:500px; 
-    width:100%;
+    width:80%;
     margin: auto;
     
 }
@@ -43,9 +36,8 @@
     background:white;
     border-radius:6px;
     overflow:hidden;
-    max-width:700px; 
-    width:100%;
-    margin: auto;
+    width:80%;
+    margin: 20px 5px 5px 5px;
 }
 td{
     padding-left: 8px;
@@ -56,6 +48,7 @@ td{
 th{
     padding-left: 8px;
     color: #ffffff;
+    text-align: center;
 }
 
 thead tr{ 
@@ -94,9 +87,7 @@ button li a{
     color: white;
 }
 .contenedor {
-
-	max-width: 100%;
-	width: 480px;
+	max-width: 1000px;
 	margin: 20px   30px   40px;
 }
 
@@ -139,7 +130,6 @@ button li a{
 Full screen Modal 
 */
 .fullscreen-modal .modal-dialog {
-    margin: 20% 0px 0px 0px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;

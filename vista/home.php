@@ -29,8 +29,9 @@ $resulto = $ob->servicio();
     <script defer src="../configuracion/js/app_qr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();
@@ -116,44 +117,34 @@ $resulto = $ob->servicio();
                     </div>
                 <!-- Fin Modal del qr -->
         <!-- Fin Portada -->
-        <div class="contenedor" style="display:flex; flex-direction:column; width:100%;">
-        <div class="body" style="width:90%; align-items:center; margin:0px;">
-                <div class="tablesinfo">
+        <div class="contenedor" >
+       
                     <div class="tables">
                         <div class="table1">
                             <?php foreach ($resultado as $row) { ?>
                                 <table class="tb_saldo">
                                     <thead>
                                         <tr>
-                                            <th>ㅤㅤ</th>
-                                            <th>ㅤㅤ</th>
                                             <th scope="col-1">Su saldo es de:</th>
-                                            <th>ㅤㅤ</th>
-                                            <th>ㅤㅤ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>ㅤㅤ</td>
-                                            <td>ㅤㅤ</td>
                                             <td> <?php echo $row["saldo"] ?> MX</td>
-                                            <td>ㅤㅤ</td>
-                                            <td>ㅤㅤ</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             <?php } ?>
                         </div>
-                        <div class="table2">
-
-                            <table class="tb_historial" class="display responsive nowrap" id="myTable">
+            </div>
+            <table class="display responsive nowrap" id="myTable" style="width:100%; margin-top:15px;">
                                 <thead>
                                     <tr>
                                         <th>Folio/Servicio</th>
                                         <th>Clabe</th>
                                         <th>Concepto</th>
                                         <th>Cantidad</th>
-                                        <th>ㅤㅤ</th>
+                                        <th></th>
 
                                     </tr>
                                 </thead>
@@ -247,13 +238,6 @@ $resulto = $ob->servicio();
                                     <?php } ?>
                                 </tbody>
                             </table>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
 
 
             <script src="../configuracion/js/app_home.js"></script>
