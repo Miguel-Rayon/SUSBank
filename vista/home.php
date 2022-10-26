@@ -140,7 +140,7 @@ $resulto = $ob->servicio();
             <table class="display responsive nowrap" id="myTable" style="width:100%; margin-top:15px;">
                                 <thead>
                                     <tr>
-                                        <th>Folio/Servicio</th>
+                                        <th>Referencia</th>
                                         <th>Clabe</th>
                                         <th>Concepto</th>
                                         <th>Cantidad</th>

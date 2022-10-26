@@ -54,7 +54,7 @@
     <!-- Fin Portada -->
     <!-- Box de cards -->
     <main>
-        <h1>Contratación digital</h1>
+        <h1>Ofrecemos...</h1>
         <div class="container__box">
             <div class="box">
                 <i class="fa-solid fa-shop"></i>

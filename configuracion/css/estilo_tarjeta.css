@@ -278,3 +278,19 @@
 .formulario-tarjeta .btn-enviar:hover {
 	background: #1850b1;
 }
+
+@media screen and (max-width: 620px){
+	.tarjeta{
+	 transform: scale(0.8);
+	}
+ }
+ @media screen and (max-width: 500px){
+	.tarjeta{
+	 transform: scale(0.7);
+	}
+ }
+ @media screen and (max-width: 400px){
+	.tarjeta{
+	 transform: scale(0.6);
+	}
+ }

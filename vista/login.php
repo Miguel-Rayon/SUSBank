@@ -21,11 +21,11 @@
               <h2 class="title">Inicie Sesion</h2>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Correo" id="correo_login" name="correo_login"autofocus />
+                <input type="email" placeholder="Correo" id="correo_login" name="correo_login" autofocus required />
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Contraseña"  name="pass_login" id="pass_login" />
+                <input type="password" placeholder="Contraseña"  name="pass_login" id="pass_login" required />
               </div>
               <input type="submit" value="Inicie Sesion" class="btn solid" />
             </form>
@@ -34,26 +34,26 @@
               <h2 class="title">Registro</h2>
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Nombre Completo" id="nombre" name="nombre" autofocus />
+                <input type="text" placeholder="Nombre Completo" id="nombre" name="nombre" autofocus required/>
               </div>
               <div class="input-field">
                 <i class="fa-solid fa-address-card"></i>
-                <input type="text" placeholder="CURP" id="curp" name="curp"/>
+                <input type="text" placeholder="CURP" id="curp" name="curp" required/>
               </div>
               <li style="list-style: none;"><a style="color: #373737; font-size: 15px; text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://www.gob.mx/curp/">Click para consultar tu CURP</a></li>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Correo" id="correo" name="correo" />
+                <input type="email" placeholder="Correo" id="correo" name="correo" required/>
               </div>
               <div class="input-field">
                 <i class="fa-solid fa-phone"></i>
-                <input type="text" placeholder="Celular" id="cel" name="cel"/>
+                <input type="text" placeholder="Celular" id="cel" name="cel" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Contraseña" id="pass" name="pass" />
+                <input type="password" placeholder="Contraseña" id="pass" name="pass"  required/>
               </div>
-              <input type="submit" class="btn" id="envio-registro" value="Registrese" />
+              <input type="submit" class="btn" id="envio-registro" value="Registrese" required/>
             </form>
           </div>
         </div>

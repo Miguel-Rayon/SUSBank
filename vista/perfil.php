@@ -66,11 +66,8 @@ session_start();
                 </section>
                 <!-- Mi perfil -->
             <form action="home.php" class="sign-in-form">
-            
-            
-            <input type="submit" class="btn" value="Volver" />
-          
-          </form>
+              <input type="submit" class="btn" value="Volver" />
+            </form>
             </div>
             
           </div>
