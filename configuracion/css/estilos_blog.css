@@ -109,3 +109,20 @@
 .card .description input:hover{
     background: #484e53;
 }
+.boton {
+    width: 150px;
+    background-color: #343a40;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.boton:hover{
+    background-color: #484e53;
+}

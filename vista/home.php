@@ -13,7 +13,7 @@ $resulto = $ob->servicio();
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 
 <head>
     <meta charset="UTF-8">
@@ -117,6 +117,7 @@ $resulto = $ob->servicio();
                     </div>
                 <!-- Fin Modal del qr -->
         <!-- Fin Portada -->
+        <img src="../img/verificacion.png" style="position:fixed; z-index:500; bottom:0; left:0; width:12%;">
         <div class="contenedor" >
        
                     <div class="tables">

@@ -39,7 +39,8 @@ if($resultado->getInsertedId() > 0){
    
 }
 }else {
-    echo "no ingresar datos vacios";
+    echo '<script language="javascript">alert("No colocar datos vacios");</script>';
+    header("location: ../vista/login.php");
 }
 
 

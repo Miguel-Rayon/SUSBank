@@ -48,9 +48,57 @@
         <div class="texto" style="width:80%; display:flex; flex-direction:column; margin:auto;">
             <p><?php echo $body ?></p>
         </div>
+        
+        
+        
     </div>
+    <button class="boton" style="margin: 20px 0px 15px 10px;"><a style="color: #fff; text-transform: uppercase; font-weight: 600; text-decoration: none;" href="javascript: history.go(-1)">Volver</a></button>
+
+    <footer>
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perferendis veniam maiores, voluptatem molestiae repellendus 
+                    sunt consequuntur iste laboriosam iusto recusandae, doloribus ipsa, cumque natus placeat provident similique. Cum, itaque?</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Soluciones</h2>
+                <a onclick="prestamos()">Prestamos</a>
+                <a onclick="seguro()">Seguro de Vida</a>
+                <a onclick="inversion()">Inversiones</a>
+                <a onclick="credito()">Credito</a>
+                <a onclick="privacidad()">Privacidad</a>
+            </div>
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="sobre.php">Acerca de </a>
+                <a href="envio_correo/index.php">Contactanos</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Miguel-Rayon/SUSBank">Repositorio</a>
+                <a href="blog.php">Blog</a>
+            </div>
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="https://www.facebook.com/SUS-Bank-107577585325919/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="https://twitter.com/sus_bank?t=qoXU6ca4PXuHk_pl1j2JKg&s=09" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="https://www.linkedin.com/in/sus-bank-785273253/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="https://www.instagram.com/susbank_mx/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+        </div>
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2022 <b>SUS BANK</b></p>
+        </div>
+    </footer>
+    <!-- Fin Pie de Pagina -->
 
     
-        <script src="../configuracion/js/app_blog.js"></script>
+    <script src="../configuracion/js/app_home.js"></script>
+   <script src="../configuracion/js/app_soluciones.js"></script>
+   <script src="../configuracion/js/app_privacidad.js"></script>
+   <script src="../configuracion/js/app_get.js"></script>
 </body>
 </html>

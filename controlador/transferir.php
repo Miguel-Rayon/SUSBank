@@ -20,11 +20,13 @@ $resultado = $obj -> transferencia($num_f,$clabe_rec,$clabe_env,$cantidad,$conce
 if(!empty($resultado)){
     header("location: ../vista/home.php");
 }else{
-    echo "No se pudo efectuar la trasferencia";
+    echo '<script language="javascript">alert("No pudo hacer la transferencia");</script>';
+    header("location: ../vista/transferencia.php");
 }
 
 }else{
-    echo "no colocar datos vacios";
+    echo '<script language="javascript">alert("No colocar datos vacios");</script>';
+    header("location: ../vista/transferencia.php");
 }
 
 ?>

@@ -13,9 +13,11 @@ if($_POST['servicios']!= null AND $_POST['referencia']!= null AND $_POST['cantid
  if(!empty($resultado)){
     header("location: ../vista/home.php");
 }else{
-    echo "No se pudo efectuar el pago";
+    echo '<script language="javascript">alert("No se pudo hacer la transferencia");</script>';
+    header("location: ../vista/transferencia.php");
 }
 }else{
-    echo "no colocar datos vacios";
+    echo '<script language="javascript">alert("No colocar datos vacios");</script>';
+    header("location: ../vista/transferencia.php");
 }
 ?>

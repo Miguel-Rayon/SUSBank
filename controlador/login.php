@@ -1,3 +1,4 @@
+<script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 <?php session_start();
 include ("../modelo/mongoconexion.php");
 include("../modelo/mongo_login.php");
@@ -19,17 +20,33 @@ if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
             $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
         }
         if($correo == $obj["correo"] AND $pass == $obj["pass"]){
+            echo '<script language="javascript">alert("Has Iniciado sesion, Benvenido!");</script>';
             header("location: ../vista/home.php");
         }else{
-            echo "Contraseña y/o correo incorrecto";
+            echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "¡La contraseña y/o correo no coincide!",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
+
         }
          
     }
     else{
-        echo "Wrong combination of username and password";
+        echo '<script language="javascript">alert("Ha ocurrido un error con la base de datos :(");</script>';
+        header("location: ../vista/login.php");
     }
 }else{
-    echo "no ingresar datos vacios";
+    echo '<script language="javascript">alert("No colocar datos vacios");</script>';
+    header("location: ../vista/login.php");
 }
 
 

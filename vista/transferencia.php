@@ -18,6 +18,7 @@ $_SESSION['id_user'];
     <title>Tranferir</title>
 </head>
 <body>
+<img src="../img/verificacion.png" style="position:fixed; z-index:500; bottom:0; left:0; width:12%;">
     <div class="container">
         <div class="forms-container">
           <div class="signin-signup">
