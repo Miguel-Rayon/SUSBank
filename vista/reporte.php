@@ -66,7 +66,7 @@ $resulta = $obj -> dato();
                     ?></a></li></button>
                 </div>
                 <div class="container__vector">
-                    <img src="../img/Revenue _Monochromatic.svg" alt="portada" type="img/svg">
+                    <img src="../img/tax-animate.svg" alt="portada" type="img/svg">
                 </div>
                 
             </div>

@@ -80,7 +80,7 @@
                 Registrese
               </button>
             </div>
-            <img src="../img/login.svg" class="image" alt="" />
+            <img src="../img/mobile-login-animate.svg" class="image" alt="" />
           </div>
           <div class="panel right-panel">
             <div class="content">
@@ -93,7 +93,7 @@
                 Inicie Sesion
               </button>
             </div>
-            <img src="../img/register.svg" class="image" alt="" />
+            <img src="../img/account-animate.svg" class="image" alt="" />
           </div>
         </div>
       </div>

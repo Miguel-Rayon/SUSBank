@@ -81,7 +81,7 @@ $_SESSION['id_user'];
                 Click aqui!
               </button>
             </div>
-            <img src="../img/Calculator_Monochromatic.svg" class="image" alt="" />
+            <img src="../img/e-wallet-animate.svg" class="image" alt="" />
           </div>
           <div class="panel right-panel">
             <div class="content">
@@ -94,7 +94,7 @@ $_SESSION['id_user'];
                 Click aqui!
               </button>
             </div>
-            <img src="../img/Money transfer _Monochromatic.svg" class="image" alt="" />
+            <img src="../img/online-transactions-animate.svg" class="image" alt="" />
           </div>
         </div>
       </div>

@@ -81,7 +81,7 @@ session_start();
                 Proximamente agregaremos mas opciones en un futuro, agradecemos tu preferencia en SUS Bank
               </p>
             </div>
-            <img src="../img/Piggy bank_Monochromatic.svg" class="image" alt="" />
+            <img src="../img/profile-interface-animate.svg" class="image" alt="" />
           </div>
         </div>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
