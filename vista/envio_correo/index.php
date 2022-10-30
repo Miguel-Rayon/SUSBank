@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../../configuracion/css/estilos_login.php">
+  <link rel="stylesheet" href="../../configuracion/css/estilos_login.css">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="shortcut icon" type="image/x-icon" href="../../img/logo.png">
   <link rel="stylesheet" href="styles.css">
