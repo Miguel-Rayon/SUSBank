@@ -61,6 +61,7 @@ session_start();
                       </div>
                     </div>
                     <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+                    <p class="leyenda">Clabe: <?php echo $_SESSION['clabe']?> </p>
                     <a href="index.php" class="link-banco">SUS BANK</a>
                   </div>
                 </section>

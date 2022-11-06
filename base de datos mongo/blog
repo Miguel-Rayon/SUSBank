@@ -8,9 +8,10 @@
   "body": "¿Qué son los paneles solares? Los paneles solares son estructuras que permiten captar la energía solar para transformarla en electricidad y usarla de diferentes maneras en el hogar u oficina. Generalmente, estas instalaciones están hechas de aluminio y están compuestas por un conjunto de células solares con semiconductores que convierten la luz en energía eléctrica al ser separada por cargas positivas y cargas negativas en las células solares. Ventajas de tener un panel solar en casa Los paneles solares no solo contribuyen para preservar el medio ambiente, también ofrecen ventajas que puedes aprovechar en casa, tal como:  Ahorras dinero: Todo depende del tamaño o el número de paneles solares que instales en tu casa, sin embargo, puedes llegar a ahorrar hasta un 90% en el recibo de luz y gas. Asimismo, no solo estarás contribuyendo al cuidado del medio ambiente, también podrás ahorrar o equilibrar tus finanzas. Fácil de mantener: Para asegurar un funcionamiento adecuado de los paneles solares solo necesitas limpiarlo para evitar que se acumule el polvo, por lo cual, no necesitarás invertir grandes cantidades de dinero para brindarle un buen mantenimiento.  Energía limpia:  Es una fuente de energía que no implica ningún riesgo para el calentamiento global, ya que no genera gases nocivos o sustancias tóxicas. Aumenta la plusvalía de tu propiedad. Las viviendas con paneles solares son más cotizadas en comparación con las que tienen instalaciones eléctricas convencionales, por lo cual, si en un futuro quieres vender tu casa, podrás obtener un valor mayor.  Disponibilidad: Los paneles solares pueden ser usados en casi cualquier parte del mundo. Con frecuencia las viviendas y empresas optan por este tipo de energía por sus múltiples ventajas y requisitos mínimos para su instalación.",
   "date": {
     "$date": {
-      "$numberLong": "1664859600000"
+      "$numberLong": "1664841600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/photos/energia-solar-sostenibilidad-marquee.jpg.img.768.1662991068949.jpg"
 },{
   "_id": {
     "$oid": "634771a8157e82d6c83bd7c9"
@@ -23,7 +24,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/agosto/X-ejemplos-de-liderazgo-en-empresas-exitosas.jpg.img.1600.1661890498965.jpg"
 },{
   "_id": {
     "$oid": "634771ea157e82d6c83bd7ca"
@@ -36,7 +38,8 @@
     "$date": {
       "$numberLong": "1663045200000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/agosto/Actividades-para-el-15-de-septiembre-aprovechando-tu-tarjeta-de-credito.jpg.img.1600.1662050269786.jpg"
 },{
   "_id": {
     "$oid": "63477227157e82d6c83bd7cb"
@@ -49,7 +52,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/marzo/Como-remodelar-una-casa-y-evitar-imprevistos.jpg.img.1600.1648493397742.jpg"
 },{
   "_id": {
     "$oid": "63477254157e82d6c83bd7cc"
@@ -62,7 +66,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/junio/Como-administrar-mi-dinero-siendo-papa.jpg.img.1600.1655909631362.jpg"
 },{
   "_id": {
     "$oid": "6347726d157e82d6c83bd7cd"
@@ -75,7 +80,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2021/noviembre/Como_hacer_un_analisis_FODA_para_tu_negocio.jpg.img.1600.1642191070041.jpg"
 },{
   "_id": {
     "$oid": "634772c4157e82d6c83bd7ce"
@@ -88,7 +94,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/photos/mujer-latina-movil-cafe-ciudad-marquee.png.img.1600.1662130272548.png"
 },{
   "_id": {
     "$oid": "6347730d157e82d6c83bd7cf"
@@ -101,7 +108,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/agosto/Actividades-para-el-15-de-septiembre-aprovechando-tu-tarjeta-de-credito.jpg.img.1600.1662050269786.jpg"
 },{
   "_id": {
     "$oid": "6347731a157e82d6c83bd7d0"
@@ -114,7 +122,8 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/mayo/X-acciones-para-reducir-el-impacto-ambiental-desde-casa.jpg.img.1600.1658509495985.jpg"
 },{
   "_id": {
     "$oid": "63477387157e82d6c83bd7d1"
@@ -127,5 +136,6 @@
     "$date": {
       "$numberLong": "1664859600000"
     }
-  }
+  },
+  "imagencover": "https://www.bbva.mx/content/dam/public-web/mexico/images/edufin-/persona/marquee-edufin/2022/mayo/X-razones-para-seguir-estudiando-despues-de-graduarse.jpg.img.1600.1658440733825.jpg"
 }]

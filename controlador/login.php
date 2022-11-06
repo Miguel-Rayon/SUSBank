@@ -20,8 +20,20 @@ if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
             $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
         }
         if($correo == $obj["correo"] AND $pass == $obj["pass"]){
-            echo '<script language="javascript">alert("Has Iniciado sesion, Benvenido!");</script>';
-            header("location: ../vista/home.php");
+            echo 'Bienvenido';
+            echo '<script>
+            Swal.fire({
+             icon: "success",
+             title: "Exito",
+             text: "Bienvenido a SUS Bank",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/home.php";
+                }
+             });
+            </script>';
         }else{
             echo '<script>
             Swal.fire({
@@ -41,12 +53,36 @@ if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
          
     }
     else{
-        echo '<script language="javascript">alert("Ha ocurrido un error con la base de datos :(");</script>';
-        header("location: ../vista/login.php");
+        echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "No ingresar Datos vacios",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
     }
 }else{
-    echo '<script language="javascript">alert("No colocar datos vacios");</script>';
-    header("location: ../vista/login.php");
+    echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "Ha ocurrido un problema con la base de datos",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
 }
 
 

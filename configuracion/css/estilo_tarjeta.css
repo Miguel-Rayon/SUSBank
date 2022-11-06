@@ -280,17 +280,23 @@
 }
 
 @media screen and (max-width: 620px){
-	.tarjeta{
+	.tarjeta {
 	 transform: scale(0.8);
+	 width: 600px;
+	 margin-left: -30px;
 	}
  }
  @media screen and (max-width: 500px){
-	.tarjeta{
+	.tarjeta {
 	 transform: scale(0.7);
+	 width: 500px;
+	 margin-left: -60px;
 	}
  }
  @media screen and (max-width: 400px){
-	.tarjeta{
+	.tarjeta { 
 	 transform: scale(0.6);
+	 width: 450px;
+	 margin-left: -50px;
 	}
  }
