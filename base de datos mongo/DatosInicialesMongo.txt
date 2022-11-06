@@ -19,3 +19,7 @@ mongod
 mongo -u  mongoadmin -p 123456 --authenticationDatabase susbank
 
 insertar colecciones de la base de datos.
+
+//MongoAtlas
+
+mongodb+srv://leyinork:mSd3BRwvTOXRCf7J@susbank.8fvcnh8.mongodb.net/test
