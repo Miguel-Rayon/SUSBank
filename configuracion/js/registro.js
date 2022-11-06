@@ -1,4 +1,15 @@
 function registro() {
+    var nombre = document.getElementById('nombre').value;
+    var correo = document.getElementById('correo').value;
+    var curp = document.getElementById('curp').value;
+    var cel = document.getElementById('cel').value;
+    var pass = document.getElementById('pass').value;
+    var datos = new FormData();
+    datos.append("nombre", nombre)
+    datos.append("correo",correo)
+    datos.append("curp",curp)
+    datos.append("cel",cel)
+    datos.append("pass",pass)
     Swal.fire({
         title: 'Atención!',
         text: "Desea terminar su registro?, asegurese de que sus datos sean correctos.",

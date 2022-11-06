@@ -38,7 +38,7 @@ $resulta = $obj -> dato();
             <div class="container__nav">
                 <nav id="nav">
                     <ul> 
-                        <li><a id="btnCrearPdf" style="cursor: pointer;" class="select">Generar PDF</a></li>
+                        <li><a id="btnCrearPdf" style="cursor: pointer;" class="select">PDF</a></li>
                         <li><a href="home.php" class="select">Volver</a></li>
                     </ul>
                 </nav>
@@ -56,17 +56,17 @@ $resulta = $obj -> dato();
                     <p>Estado de Cuenta de <?php echo $_SESSION['nombre']; ?></p>
                     <?php foreach($resulta as $a){ ?>
                         <p>numero de cuenta: <?php echo $a["num_tarjeta"] ?></p>
-                        <p>clabe interbancaria: <?php echo $a["clabe"] ?></p>
+                        <p>clabe: <?php echo $a["clabe"] ?></p>
                         <p>CURP: <?php echo $a["curp"] ?></p>
                     <?php } ?>
                     <button><li><a><?php
                     date_default_timezone_set('America/Monterrey');
-                    $DateAndTime = date('m-d-Y h:i:s a', time());  
+                    $DateAndTime = date('m-d-Y h:i:s a', time());   
                     echo "Fecha y Hora de consulta de estado de cuenta $DateAndTime.";
                     ?></a></li></button>
                 </div>
                 <div class="container__vector">
-                    <img src="../img/Revenue _Monochromatic.svg" alt="portada" type="img/svg">
+                    <img src="../img/tax-animate.svg" alt="portada" type="img/svg">
                 </div>
                 
             </div>

@@ -16,23 +16,24 @@
     <header id="header">
         <div class="container_header">
             <div class="logo">
-                <img src="../img/logo.png" alt="logo">
+                <img src="../img/logo.png"  alt="logo">
             </div>
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
                         <li><a href="index.php" class="select">Inicio</a></li>
                         <li><a href="login.php">Acceso</a></li>
-                        <li><a href="sobre.php">Sobre Nosotros</a></li>
-                        <li><a href="ayuda.php">Ayuda</a></li>
+                        <li><a href="sobre.php">Acerca de</a></li>
+                        <li><a href="blog.php">Blog</a></li>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
             </div>
         </div>
-        
+        <?php include('ayuda.php') ?>
     </header>
     <!-- Fin Barra de navegacion -->
+    
     <!-- Portada -->
     <div class="container__all" id="container_all">
         <div class="cover">
@@ -46,14 +47,14 @@
                     <input type="button" value="Get Started" onclick="get()">
                 </div>
                 <div class="container__vector">
-                    <img src="../img/Wallet_Monochromatic.svg" alt="portada" type="img/svg">
+                    <img src="../img/business-competition-animate.svg" alt="portada" type="img/svg" style="width:530px;">
                 </div>
             </div>
         </div>
     <!-- Fin Portada -->
     <!-- Box de cards -->
     <main>
-        <h1>Contratación digital</h1>
+        <h2 style="font-size: 40px;font-weight: 900;color: #373737; text-align:center;">Contratación digital</h2>
         <div class="container__box">
             <div class="box">
                 <i class="fa-solid fa-shop"></i>
@@ -130,15 +131,15 @@
                 <h2>Compañia</h2>
                 <a href="sobre.php">Acerca de </a>
                 <a href="envio_correo/index.php">Contactanos</a>
-                <a href="https://github.com/Miguel-Rayon/SUSBank">Repositorio</a>
-                <a href="ayuda.php">Ayuda</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Miguel-Rayon/SUSBank">Repositorio</a>
+                <a href="#">Blog</a>
             </div>
             <div class="box__footer">
                 <h2>Redes Sociales</h2>
-                <a href="https://www.facebook.com/SUS-Bank-107577585325919/"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                <a href="https://twitter.com/sus_bank?t=qoXU6ca4PXuHk_pl1j2JKg&s=09"><i class="fab fa-twitter-square"></i> Twitter</a>
-                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                <a href="https://www.facebook.com/SUS-Bank-107577585325919/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="https://twitter.com/sus_bank?t=qoXU6ca4PXuHk_pl1j2JKg&s=09" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="https://www.linkedin.com/in/sus-bank-785273253/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="https://www.instagram.com/susbank_mx/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i> Instagram</a>
             </div>
         </div>
         <div class="box__copyright">

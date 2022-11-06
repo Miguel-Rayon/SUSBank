@@ -1,0 +1,209 @@
+[{
+  "_id": {
+    "$oid": "63475707ccb81eec5f0a6c02"
+  },
+  "num_f": "31157",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 07:08:39 pm"
+},{
+  "_id": {
+    "$oid": "6347574956786273860c4472"
+  },
+  "num_f": "55900",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "prueba de pago con fecha",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 07:09:45 pm"
+},{
+  "_id": {
+    "$oid": "634757f791dc1f4bd6071f82"
+  },
+  "num_f": "67049",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 300,
+  "concepto": "si",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 07:12:39 pm"
+},{
+  "_id": {
+    "$oid": "63476687c9e4bf17de09aa52"
+  },
+  "num_f": "88484",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "d",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-12-2022 08:14:47 pm"
+},{
+  "_id": {
+    "$oid": "6349fca455141cb6bf0e6942"
+  },
+  "num_f": "12426",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "prueba aumento saldo",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 07:19:48 pm"
+},{
+  "_id": {
+    "$oid": "6349fe2f99036d34ae005682"
+  },
+  "num_f": "91442",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pagoxd",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 07:26:23 pm"
+},{
+  "_id": {
+    "$oid": "634a02a5c2a4d336e202aee2"
+  },
+  "num_f": "68839",
+  "clabe_rec": "123456789876543211",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 07:45:25 pm"
+},{
+  "_id": {
+    "$oid": "634a08e999036d34ae005683"
+  },
+  "num_f": "60755",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:12:09 pm"
+},{
+  "_id": {
+    "$oid": "634a099fc2a4d336e202aee3"
+  },
+  "num_f": "31872",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:15:11 pm"
+},{
+  "_id": {
+    "$oid": "634a0a62bb8e08e5f9007282"
+  },
+  "num_f": "58060",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "hola que haces",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:18:26 pm"
+},{
+  "_id": {
+    "$oid": "634a0b06f11ac62e68071f92"
+  },
+  "num_f": "51028",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "si",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:21:10 pm"
+},{
+  "_id": {
+    "$oid": "634a0b8999036d34ae005684"
+  },
+  "num_f": "04031",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pagoxd",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:23:21 pm"
+},{
+  "_id": {
+    "$oid": "634a0cd5c2a4d336e202aee4"
+  },
+  "num_f": "82577",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pagoxd",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:28:53 pm"
+},{
+  "_id": {
+    "$oid": "634a0d51affea5b3660a4f02"
+  },
+  "num_f": "17205",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:30:57 pm"
+},{
+  "_id": {
+    "$oid": "634a0f0c3688bf6b62072d12"
+  },
+  "num_f": "91826",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:38:20 pm"
+},{
+  "_id": {
+    "$oid": "634a106bc2a4d336e202aee5"
+  },
+  "num_f": "68016",
+  "clabe_rec": "362522021803118587",
+  "clabe_env": "157351725581074754",
+  "cantidad": 200,
+  "concepto": "Prueba de pago",
+  "id_user": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "fecha": "10-14-2022 08:44:11 pm"
+}]

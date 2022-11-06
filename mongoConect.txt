@@ -1,1 +1,0 @@
-mongo -u  mongoadmin -p 123456 --authenticationDatabase susbank

@@ -35,11 +35,37 @@ if($resultado->getInsertedId() > 0){
     
     header("location: ../vista/login.php"); 
 } else {
-    print_r($respuesta);
+    echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "Ha ocurrido un problema con la base de datos",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
    
 }
 }else {
-    echo "no ingresar datos vacios";
+    echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "No ingresar Datos vacios",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
 }
 
 

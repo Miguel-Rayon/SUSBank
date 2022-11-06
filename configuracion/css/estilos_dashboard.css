@@ -6,25 +6,18 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-.tablesinfo{
-    display:flex;
-    flex-direction: column;
-    max-width: 800px;
-}
 .table1, .table2{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px;
+    margin:0px;
 }
 
 .tables{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-    max-width: 1200px;
+    flex-direction: column;
+    max-width: 800px;
     margin: auto;
 }
 .tables .table1 .tb_saldo{
@@ -33,8 +26,7 @@
     background:white;
     border-radius:6px;
     overflow:hidden;
-    max-width:500px; 
-    width:100%;
+    width:80%;
     margin: auto;
     
 }
@@ -44,9 +36,8 @@
     background:white;
     border-radius:6px;
     overflow:hidden;
-    max-width:700px; 
-    width:100%;
-    margin: auto;
+    width:80%;
+    margin: 20px 5px 5px 5px;
 }
 td{
     padding-left: 8px;
@@ -57,6 +48,7 @@ td{
 th{
     padding-left: 8px;
     color: #ffffff;
+    text-align: center;
 }
 
 thead tr{ 
@@ -95,11 +87,10 @@ button li a{
     color: white;
 }
 .contenedor {
-	max-width: 100%;
-	width: 480px;
+	max-width: 1000px;
 	margin: 20px   30px   40px;
-	float: left;
 }
+
 
 .formulario input[type='text'] {
 	padding: 20px;
@@ -131,22 +122,31 @@ button li a{
 .contenedorQR {
 	max-width: 100%;
 	width: 480px;
-	margin: 20px   30px   40px;
+	margin: 20px;
 	float: right;
 }
-@media screen and (max-width: 870px){
-.tables{
-    transform: scale(0.7);
-}
-}
-@media screen and (max-width: 500px){
-    .tables{
-        transform: scale(0.9);
+
+ /*
+Full screen Modal 
+*/
+.fullscreen-modal .modal-dialog {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .fullscreen-modal .modal-dialog {
+      width: 750px;
     }
- }
- @media screen and (max-width: 445px){
-    .tables{
-        transform: scale(0.8);
+  }
+  @media (min-width: 992px) {
+    .fullscreen-modal .modal-dialog {
+      width: 970px;
     }
- }
+  }
+  @media (min-width: 1200px) {
+    .fullscreen-modal .modal-dialog {
+       width: 1170px;
+    }
+  }
 

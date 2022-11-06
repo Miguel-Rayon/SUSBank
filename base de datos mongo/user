@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "633e109f770d907a6e061ff2"
+  },
+  "nombre": "Administrador",
+  "correo": "admin@gmail.com",
+  "pass": "admin",
+  "curp": "CURPDEEJEMPLO",
+  "cel": "811000000",
+  "num_tarjeta": "4917803634181851",
+  "saldo": 9999999,
+  "clabe": "157351725581074754"
+},{
+  "_id": {
+    "$oid": "633e2f468dd4125662046082"
+  },
+  "nombre": "Jose Miguel",
+  "correo": "ejemplo@gmail.com",
+  "pass": "1234",
+  "curp": "CURPDEEJEMPLO",
+  "cel": "811000000",
+  "num_tarjeta": "4917170647998498",
+  "saldo": 0,
+  "clabe": "362522021803118587"
+}]

@@ -1,3 +1,4 @@
+<script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 <?php session_start();
 include ("../modelo/mongoconexion.php");
 include("../modelo/mongo_login.php");
@@ -18,13 +19,70 @@ if($_POST['correo_login'] != null AND $_POST['pass_login'] != null){
             $_SESSION['clabe'] = $obj["clabe"];
             $_SESSION['num_tarjeta'] = $obj["num_tarjeta"];
         }
-        header("location: ../vista/home.php"); 
+        if($correo == $obj["correo"] AND $pass == $obj["pass"]){
+            echo 'Bienvenido';
+            echo '<script>
+            Swal.fire({
+             icon: "success",
+             title: "Exito",
+             text: "Bienvenido a SUS Bank",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/home.php";
+                }
+             });
+            </script>';
+        }else{
+            echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "¡La contraseña y/o correo no coincide!",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
+
+        }
+         
     }
     else{
-        echo "Wrong combination of username and password";
+        echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "No ingresar Datos vacios",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
     }
 }else{
-    echo "no ingresar datos vacios";
+    echo 'Error!';
+        echo '<script>
+            Swal.fire({
+             icon: "error",
+             title: "Oops...",
+             text: "Ha ocurrido un problema con la base de datos",
+             showConfirmButton: true,
+             confirmButtonText: "Cerrar"
+             }).then(function(result){
+                if(result.value){                   
+                 window.location = "../vista/login.php";
+                }
+             });
+            </script>';
 }
 
 

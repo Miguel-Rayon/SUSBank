@@ -10,7 +10,7 @@ $_SESSION['id_user'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/333b9b8f44.js" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
@@ -18,6 +18,7 @@ $_SESSION['id_user'];
     <title>Tranferir</title>
 </head>
 <body>
+<img src="../img/verificacion.png" style="position:fixed; z-index:500; bottom:0; left:0; width:12%;">
     <div class="container">
         <div class="forms-container">
           <div class="signin-signup">
@@ -45,7 +46,7 @@ $_SESSION['id_user'];
               <div class="input-field">
                 <i class="fas fa-user"></i>
                 <input list="servicio" placeholder="Servicio a pagar" name="servicios" id="servicios" />
-                <datalist name="servicio" id="servicio">
+                <datalist name="servicio" id="servicio" >
                     <option value="CFE">
                     <option value="Agua y Drenaje">
                     <option value="TELMEX">
@@ -80,7 +81,7 @@ $_SESSION['id_user'];
                 Click aqui!
               </button>
             </div>
-            <img src="../img/Calculator_Monochromatic.svg" class="image" alt="" />
+            <img src="../img/e-wallet-animate.svg" class="image" alt="" />
           </div>
           <div class="panel right-panel">
             <div class="content">
@@ -93,7 +94,7 @@ $_SESSION['id_user'];
                 Click aqui!
               </button>
             </div>
-            <img src="../img/Money transfer _Monochromatic.svg" class="image" alt="" />
+            <img src="../img/online-transactions-animate.svg" class="image" alt="" />
           </div>
         </div>
       </div>
