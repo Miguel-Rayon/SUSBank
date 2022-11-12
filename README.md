@@ -6,7 +6,7 @@
 
 _Para entrar a la visualizacion de la pagina web hay que acceder al siguiente link:_
 
-_Link de la pagina web: [SUS Bank](https://miguel-rayon.github.io/SUSBank/vista/index.html)_
+_Link de la pagina web: [SUS Bank](https://miguel-rayon.github.io/SUSBank/vista/index.php)_
 ## Construido con 🛠️
 
 _Las Herramientas que hemos usado al momento (planeamos ir agregando mas conforme avance el proyecto)_

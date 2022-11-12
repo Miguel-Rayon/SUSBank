@@ -8,6 +8,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../configuracion/css/estilos.css">
+    <link rel="manifest" href="../manifest.webmanifest">
     <title>SUS Bank</title>
 </head>
 <body>
