@@ -3,7 +3,7 @@
     "short_name": "bank",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#ffffff",
     "description": "A bank app.",
     "icons": [
       {
