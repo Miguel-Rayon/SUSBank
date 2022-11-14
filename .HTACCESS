@@ -7,4 +7,4 @@ RewriteRule ^(.*)$ $1.php
 </IfModule>
 
 #404
-ErrorDocument 404 http://localhost/SUSBank/404.php
+ErrorDocument 404 https://localhost/SUSBank/404.php
