@@ -1,7 +1,7 @@
 {
     "name": "SUSBank",
     "short_name": "bank",
-    "start_url": "./vista/index.php",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
     "description": "A bank app.",
