@@ -1,11 +1,11 @@
 const cacheName = 'susbank';
 const staticAssets = [
-  './',
-  '../configuracion/css/estilos.css',
-  '../configuracion/js/app.js',
-  '../index.js',
-  '../img/logo.png',
-  '../img/sus.png',
+  './vista/index.php', 
+  './configuracion/css/estilos.css',
+  './configuracion/js/app.js',
+  './index.js',
+  './img/logo.png',
+  './img/sus.png',
   'https://kit.fontawesome.com/333b9b8f44.js',
   'https://cdn.jsdelivr.net/npm/sweetalert2@11',
 ];
