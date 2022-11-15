@@ -80,7 +80,7 @@ $resulto = $ob->servicio();
 
                     <form action="" id="formulario" class="formulario">
                         <input type="hidden" value="https://www.google.com/" id="link" placeholder="Escribe el monto de dinero" />
-                        <button data-toggle="modal" data-target="#exampleModal">Depositar/Retirar sin tarjeta</button>
+                        <button data-toggle="modal" data-target="#exampleModal" onclick="push()">Depositar/Retirar sin tarjeta</button>
                     </form>
                 </div>
 
@@ -243,6 +243,7 @@ $resulto = $ob->servicio();
 
             <script src="../configuracion/js/app_home.js"></script>
             <script src="../configuracion/js/cerrar.js"></script>
+            <script src="../configuracion/js/push.min.js"></script>
 </body>
 
 </html>

@@ -42,3 +42,32 @@ window.addEventListener("resize", function(){
 /**
  * Fin de mover la barra de navegacion 
  */
+ function push(){
+
+    Push.Permission.request();
+
+    Push.create('QR generado', {
+
+    body: 'Ve a tu banco mas cercano para hacer tu retiro/deposito :)',
+
+    icon: "../img/me.png",
+
+    timeout: 1500000,              
+
+    vibrate: [100, 100, 100],    
+
+    onClick: function() {
+
+       
+
+        window.location="https://google.es";
+
+ 
+
+        console.log(this);
+
+    }  
+
+});
+
+  }
